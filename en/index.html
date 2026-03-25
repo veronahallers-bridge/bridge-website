@@ -3,124 +3,754 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bridged — Connecting Restaurant Managers with the Infinite Possibilities of AI</title>
-<meta name="description" content="Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability. Free guides, real examples. Built on 14 years in the industry.">
+<title>Bridged - Connecting Restaurant Managers with the Infinite Possibilities of AI</title>
+<meta name="description" content="Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability.">
 <link rel="canonical" href="https://ai-bridge.restaurant/en/">
 <link rel="alternate" hreflang="en" href="https://ai-bridge.restaurant/en/">
 <link rel="alternate" hreflang="de" href="https://ai-bridge.restaurant/de/">
-<link rel="alternate" hreflang="x-default" href="https://ai-bridge.restaurant/en/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bridged — AI for Restaurant Managers">
-<meta property="og:description" content="Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability.">
-<meta property="og:url" content="https://ai-bridge.restaurant/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#FAFAF8;color:#333;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-nav{position:fixed;top:0;width:100%;z-index:100;padding:1.2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,250,248,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.04)}
-.nav-logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:#0A0A0A;text-decoration:none;letter-spacing:-0.02em}
-.nav-logo span{color:#E8503E}
-.nav-links{display:flex;gap:2.5rem;align-items:center;list-style:none}
-.nav-links a{text-decoration:none;color:#333;font-size:0.9rem;font-weight:400;transition:color 0.2s}
-.nav-links a:hover{color:#E8503E}
-.nav-cta{background:#0A0A0A !important;color:#FAFAF8 !important;padding:0.6rem 1.5rem !important;border-radius:8px;font-weight:500 !important;transition:all 0.2s !important}
-.nav-cta:hover{background:#E8503E !important;transform:translateY(-1px)}
-.lang-switch{font-size:0.82rem;color:#999;text-decoration:none;border:1px solid #E8E8E8;padding:0.3rem 0.7rem;border-radius:6px;transition:all 0.2s}
-.lang-switch:hover{border-color:#333;color:#333}
-.hero{min-height:100vh;display:flex;align-items:center;padding:0 2.5rem;position:relative;overflow:hidden}
-.hero-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Syne',sans-serif;font-size:clamp(15rem,25vw,28rem);font-weight:800;color:rgba(0,0,0,0.02);letter-spacing:-0.04em;pointer-events:none;white-space:nowrap;user-select:none}
-.hero-content{max-width:1300px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.hero-left{animation:fadeUp 0.8s ease-out both}
-.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:#E8503E;margin-bottom:1.5rem}
-.hero-tag::before{content:'';width:20px;height:2px;background:#E8503E}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:#0A0A0A}
-.hero h1 .accent{color:#E8503E}
-.hero-desc{margin-top:1.8rem;font-size:1.15rem;line-height:1.7;color:#555;font-weight:300;max-width:480px}
-.hero-ctas{margin-top:2.2rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.btn-main{background:#E8503E;color:#FFFFFF;padding:0.95rem 2rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:1rem;transition:all 0.25s;display:inline-flex;align-items:center;gap:0.5rem;border:none;cursor:pointer}
-.btn-main:hover{background:#D4422F;transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,80,62,0.2)}
-.btn-ghost{color:#333;padding:0.95rem 2rem;border-radius:10px;text-decoration:none;font-weight:500;font-size:1rem;border:1.5px solid #E8E8E8;transition:all 0.25s}
-.btn-ghost:hover{border-color:#333;background:rgba(0,0,0,0.02)}
-.hero-meta{margin-top:2rem;display:flex;gap:1.5rem;font-size:0.82rem;color:#999}
-.hero-meta span{display:flex;align-items:center;gap:0.3rem}
-.hero-right{animation:fadeUp 0.8s ease-out 0.3s both}
-.task-demo{background:#FFFFFF;border-radius:16px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.06),0 1px 3px rgba(0,0,0,0.04);padding:1.8rem}
-.task-demo-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;padding-bottom:1rem;border-bottom:1px solid rgba(0,0,0,0.05)}
-.task-demo-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A}
-.task-demo-badge{font-size:0.72rem;font-weight:600;background:#EEFBF2;color:#2D8C4E;padding:0.3rem 0.7rem;border-radius:100px}
-.task-item{display:flex;align-items:flex-start;gap:0.8rem;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.03);transition:all 0.5s ease}
-.task-item:last-child{border-bottom:none}
-.task-check{width:20px;height:20px;border-radius:6px;border:2px solid #E8E8E8;flex-shrink:0;margin-top:1px;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center}
-.task-item.done .task-check{background:#2D8C4E;border-color:#2D8C4E}
-.task-check-svg{opacity:0;transition:opacity 0.2s}
-.task-item.done .task-check-svg{opacity:1}
-.task-text{font-size:0.9rem;line-height:1.45;color:#333;transition:all 0.3s}
-.task-item.done .task-text{color:#999;text-decoration:line-through}
-.task-time{margin-left:auto;font-size:0.75rem;font-weight:600;color:#E8503E;white-space:nowrap;opacity:0;transition:opacity 0.3s;flex-shrink:0;padding-top:2px}
-.task-item.done .task-time{opacity:1}
-.task-footer{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.05);display:flex;justify-content:space-between;align-items:center}
-.task-total{font-size:0.82rem;color:#999}
-.task-total b{color:#2D8C4E}
-.task-ai-label{font-size:0.72rem;font-weight:500;color:#999;display:flex;align-items:center;gap:0.4rem}
-.ai-dot{width:6px;height:6px;background:#2D8C4E;border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
-.what{padding:7rem 2.5rem;background:#0A0A0A;color:#FFFFFF}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-tag{font-size:0.78rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:#E8503E;margin-bottom:1rem;display:block}
-.what h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;letter-spacing:-0.02em;max-width:700px;margin-bottom:1rem}
-.what-desc{font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,0.6);font-weight:300;max-width:600px;margin-bottom:3rem}
-.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.what-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:2rem;transition:all 0.3s}
-.what-card:hover{background:rgba(255,255,255,0.07);transform:translateY(-3px);border-color:rgba(255,255,255,0.1)}
-.what-card-icon{font-size:1.6rem;margin-bottom:1rem}
-.what-card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.6rem}
-.what-card p{font-size:0.9rem;line-height:1.6;color:rgba(255,255,255,0.5);font-weight:300}
-.how{padding:7rem 2.5rem;background:#FAFAF8}
-.how h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;letter-spacing:-0.02em;color:#0A0A0A;max-width:600px;margin-bottom:3rem}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.step-num{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:rgba(232,80,62,0.08);line-height:1;margin-bottom:0.8rem}
-.step h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:#0A0A0A;margin-bottom:0.6rem}
-.step p{font-size:0.92rem;line-height:1.65;color:#555;font-weight:300}
-.products{padding:7rem 2.5rem;background:#F4F4F2}
-.products h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;letter-spacing:-0.02em;color:#0A0A0A;margin-bottom:3rem}
-.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.product-card{background:#FFFFFF;border-radius:14px;padding:2.2rem;border:1px solid rgba(0,0,0,0.05);transition:all 0.3s}
-.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
-.product-label{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:0.3rem 0.7rem;border-radius:6px;display:inline-block;margin-bottom:1rem}
-.product-label.live{color:#2D8C4E;background:#EEFBF2}
-.product-label.soon{color:#E8503E;background:#FFF3F1}
-.product-card h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.6rem}
-.product-card p{font-size:0.9rem;line-height:1.6;color:#555;font-weight:300}
-.founder{padding:6rem 2.5rem;background:#FAFAF8}
-.founder-inner{max-width:800px;margin:0 auto;text-align:center}
-.founder-quote{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;line-height:1.4;color:#1A1A1A;margin-bottom:1.5rem;letter-spacing:-0.01em}
-.founder-bio{font-size:0.95rem;line-height:1.7;color:#555;font-weight:300;max-width:600px;margin:0 auto}
-.founder-bio b{color:#1A1A1A;font-weight:500}
-.cta{padding:7rem 2.5rem;background:#0A0A0A;text-align:center;position:relative;overflow:hidden}
-.cta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(232,80,62,0.1) 0%,transparent 70%);pointer-events:none}
-.cta h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#FFFFFF;margin-bottom:1rem;position:relative;letter-spacing:-0.02em}
-.cta-desc{font-size:1.05rem;color:rgba(255,255,255,0.5);font-weight:300;max-width:500px;margin:0 auto 2.5rem;line-height:1.6;position:relative}
-.email-row{display:flex;gap:0.5rem;max-width:460px;margin:0 auto;position:relative}
-.email-row input{flex:1;padding:1rem 1.3rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.06);font-size:0.95rem;color:#FFFFFF;outline:none;transition:border-color 0.3s;font-family:inherit}
-.email-row input::placeholder{color:rgba(255,255,255,0.3)}
-.email-row input:focus{border-color:#E8503E}
-.email-row button{padding:1rem 1.8rem;border-radius:10px;background:#E8503E;color:#FFFFFF;font-size:0.95rem;font-weight:600;border:none;cursor:pointer;transition:all 0.25s;white-space:nowrap;font-family:inherit}
-.email-row button:hover{background:#D4422F;transform:translateY(-1px)}
-.cta-note{font-size:0.78rem;color:rgba(255,255,255,0.25);margin-top:1rem;position:relative}
-footer{padding:2.5rem;background:#0A0A0A;border-top:1px solid rgba(255,255,255,0.05)}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#FFFFFF}
-.footer-logo span{color:#E8503E}
-.footer-links{display:flex;gap:2rem;list-style:none}
-.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
-.footer-links a:hover{color:#FFFFFF}
-.footer-copy{width:100%;text-align:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.05);font-size:0.78rem;color:rgba(255,255,255,0.2)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(25px);transition:all 0.6s cubic-bezier(0.16,1,0.3,1)}
-.reveal.vis{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.hero-content{grid-template-columns:1fr;gap:2.5rem}.hero{padding-top:7rem;padding-bottom:3rem;min-height:auto}.hero-right{order:-1}.nav-links{display:none}.what-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:1.5rem}.product-grid{grid-template-columns:1fr}.email-row{flex-direction:column}.footer-inner{flex-direction:column;text-align:center}.footer-links{justify-content:center}}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #FAFAF8;
+  color: #333;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 250, 248, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: #E8503E;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #E8503E;
+}
+
+.nav-cta {
+  background: #0A0A0A !important;
+  color: #FAFAF8 !important;
+  padding: 0.6rem 1.5rem !important;
+  border-radius: 8px;
+  font-weight: 500 !important;
+  transition: all 0.2s !important;
+}
+
+.nav-cta:hover {
+  background: #E8503E !important;
+}
+
+.lang-switch {
+  font-size: 0.82rem;
+  color: #999;
+  text-decoration: none;
+  border: 1px solid #E8E8E8;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Syne', sans-serif;
+  font-size: 20vw;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.02);
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.hero-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #E8503E;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: #E8503E;
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #0A0A0A;
+}
+
+.hero h1 .accent {
+  color: #E8503E;
+}
+
+.hero-desc {
+  margin-top: 1.8rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 300;
+  max-width: 480px;
+}
+
+.hero-ctas {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-main {
+  background: #E8503E;
+  color: #FFFFFF;
+  padding: 0.95rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-main:hover {
+  background: #D4422F;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(232, 80, 62, 0.2);
+}
+
+.btn-ghost {
+  color: #333;
+  padding: 0.95rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1.5px solid #E8E8E8;
+  transition: all 0.25s;
+}
+
+.btn-ghost:hover {
+  border-color: #333;
+}
+
+.hero-meta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  color: #999;
+}
+
+.hero-right {
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+
+.task-demo {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem;
+}
+
+.task-demo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.task-demo-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1A1A1A;
+}
+
+.task-demo-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: #EEFBF2;
+  color: #2D8C4E;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.5s ease;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #E8E8E8;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item.done .task-check {
+  background: #2D8C4E;
+  border-color: #2D8C4E;
+}
+
+.task-check-svg {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task-item.done .task-check-svg {
+  opacity: 1;
+}
+
+.task-text {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.task-item.done .task-text {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.task-time {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #E8503E;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  flex-shrink: 0;
+}
+
+.task-item.done .task-time {
+  opacity: 1;
+}
+
+.task-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-total {
+  font-size: 0.82rem;
+  color: #999;
+}
+
+.task-total b {
+  color: #2D8C4E;
+}
+
+.task-ai-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ai-dot {
+  width: 6px;
+  height: 6px;
+  background: #2D8C4E;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.what {
+  padding: 7rem 2.5rem;
+  background: #0A0A0A;
+  color: #FFFFFF;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #E8503E;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.what h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.what-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.what-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.what-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
+}
+
+.what-card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.what-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.what-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+.how {
+  padding: 7rem 2.5rem;
+  background: #FAFAF8;
+}
+
+.how h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0A0A0A;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(232, 80, 62, 0.08);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.step h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-bottom: 0.6rem;
+}
+
+.step p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #555;
+  font-weight: 300;
+}
+
+.products {
+  padding: 7rem 2.5rem;
+  background: #F4F4F2;
+}
+
+.products h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-bottom: 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.product-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 2.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.product-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.product-label.live {
+  color: #2D8C4E;
+  background: #EEFBF2;
+}
+
+.product-label.soon {
+  color: #E8503E;
+  background: #FFF3F1;
+}
+
+.product-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-bottom: 0.6rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 300;
+}
+
+.founder {
+  padding: 6rem 2.5rem;
+  background: #FAFAF8;
+}
+
+.founder-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.founder-quote {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1A1A1A;
+  margin-bottom: 1.5rem;
+}
+
+.founder-bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.founder-bio b {
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.cta {
+  padding: 7rem 2.5rem;
+  background: #0A0A0A;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cta-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.email-row {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.email-row input {
+  flex: 1;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  outline: none;
+  font-family: inherit;
+}
+
+.email-row input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.email-row button {
+  padding: 1rem 1.8rem;
+  border-radius: 10px;
+  background: #E8503E;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.email-row button:hover {
+  background: #D4422F;
+}
+
+.cta-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 1rem;
+  position: relative;
+}
+
+footer {
+  padding: 2.5rem;
+  background: #0A0A0A;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+}
+
+.footer-logo span {
+  color: #E8503E;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.footer-copy {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero { padding-top: 7rem; padding-bottom: 3rem; min-height: auto; }
+  .hero-right { order: -1; }
+  .nav-links { display: none; }
+  .what-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  .product-grid { grid-template-columns: 1fr; }
+  .email-row { flex-direction: column; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
 </style>
 </head>
 <body>
@@ -134,6 +764,7 @@ footer{padding:2.5rem;background:#0A0A0A;border-top:1px solid rgba(255,255,255,0
 <li><a href="#join" class="nav-cta">Get the Free Guide</a></li>
 </ul>
 </nav>
+
 <section class="hero">
 <div class="hero-bg-text">Bridged</div>
 <div class="hero-content">
@@ -142,13 +773,13 @@ footer{padding:2.5rem;background:#0A0A0A;border-top:1px solid rgba(255,255,255,0
 <h1>Connecting you<br>with the <span class="accent">infinite<br>possibilities</span><br>of AI.</h1>
 <p class="hero-desc">Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability. From everyday tasks to autonomous AI agents that work around the clock.</p>
 <div class="hero-ctas">
-<a href="#join" class="btn-main">Download Free Guide &#8594;</a>
+<a href="#join" class="btn-main">Download Free Guide</a>
 <a href="#what" class="btn-ghost">See what's possible</a>
 </div>
 <div class="hero-meta">
-<span>&#10003; Completely free</span>
-<span>&#10003; No tech skills needed</span>
-<span>&#10003; Built by a 14-year restaurant manager</span>
+<span>Completely free</span>
+<span>No tech skills needed</span>
+<span>Built by a 14-year restaurant manager</span>
 </div>
 </div>
 <div class="hero-right">
@@ -175,59 +806,65 @@ footer{padding:2.5rem;background:#0A0A0A;border-top:1px solid rgba(255,255,255,0
 </div>
 </div>
 </section>
+
 <section class="what" id="what">
 <div class="section-inner">
 <span class="section-tag reveal">What Bridged Does</span>
 <h2 class="reveal">We show you what AI can actually do for your restaurant.</h2>
 <p class="what-desc reveal">Not theory. Not hype. Real tasks being handled in real time. From the things eating your day to AI agents running while you sleep.</p>
 <div class="what-grid">
-<div class="what-card reveal"><div class="what-card-icon">&#9889;</div><h3>Instant daily tasks</h3><p>Reviews, emails, social posts, job ads, menu descriptions &#8212; tasks that used to take hours, done in seconds using AI tools you already have access to.</p></div>
-<div class="what-card reveal"><div class="what-card-icon">&#128202;</div><h3>Smarter decisions</h3><p>Food cost analysis, menu engineering, pricing strategy, rota optimisation &#8212; AI turns your data into clear answers and actionable advice.</p></div>
-<div class="what-card reveal"><div class="what-card-icon">&#129302;</div><h3>Autonomous AI agents</h3><p>The next level. AI agents that handle bookings, answer customer enquiries, manage your inbox and update your systems &#8212; 24/7, without you lifting a finger.</p></div>
-<div class="what-card reveal"><div class="what-card-icon">&#129489;&#8205;&#127859;</div><h3>Staff &amp; training</h3><p>Onboarding checklists, training manuals, multilingual team communication, shift scheduling &#8212; built in minutes, tailored to your restaurant.</p></div>
-<div class="what-card reveal"><div class="what-card-icon">&#128176;</div><h3>Cost control</h3><p>Supplier comparisons, waste tracking, margin recalculation, P&amp;L analysis explained in plain English. Know exactly where your money goes.</p></div>
-<div class="what-card reveal"><div class="what-card-icon">&#128241;</div><h3>Marketing &amp; presence</h3><p>Website copy, Instagram content, email campaigns, SEO, customer engagement &#8212; consistent, professional marketing without a marketing team.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#9889;</div><h3>Instant daily tasks</h3><p>Reviews, emails, social posts, job ads, menu descriptions - tasks that used to take hours, done in seconds using AI tools you already have access to.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#128202;</div><h3>Smarter decisions</h3><p>Food cost analysis, menu engineering, pricing strategy, rota optimisation - AI turns your data into clear answers and actionable advice.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#129302;</div><h3>Autonomous AI agents</h3><p>The next level. AI agents that handle bookings, answer customer enquiries, manage your inbox and update your systems - 24/7, without you lifting a finger.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#127859;</div><h3>Staff and training</h3><p>Onboarding checklists, training manuals, multilingual team communication, shift scheduling - built in minutes, tailored to your restaurant.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#128176;</div><h3>Cost control</h3><p>Supplier comparisons, waste tracking, margin recalculation, P and L analysis explained in plain English. Know exactly where your money goes.</p></div>
+<div class="what-card reveal"><div class="what-card-icon">&#128241;</div><h3>Marketing and presence</h3><p>Website copy, Instagram content, email campaigns, SEO, customer engagement - consistent, professional marketing without a marketing team.</p></div>
 </div>
 </div>
 </section>
+
 <section class="how" id="how">
 <div class="section-inner">
 <span class="section-tag reveal">How It Works</span>
 <h2 class="reveal">From overwhelmed to in control. Three steps.</h2>
 <div class="steps">
-<div class="step reveal"><div class="step-num">01</div><h3>Download the free guide</h3><p>Our starter guide shows you exactly what AI can do for your restaurant &#8212; with real examples, real tasks and real results. 15 minutes that will change how you see your workload.</p></div>
+<div class="step reveal"><div class="step-num">01</div><h3>Download the free guide</h3><p>Our starter guide shows you exactly what AI can do for your restaurant - with real examples, real tasks and real results. 15 minutes that will change how you see your workload.</p></div>
 <div class="step reveal"><div class="step-num">02</div><h3>Start using AI today</h3><p>Follow our step-by-step walkthroughs. Open ChatGPT or Claude, set up your personal assistant, and start offloading tasks immediately. No tech skills required.</p></div>
 <div class="step reveal"><div class="step-num">03</div><h3>Go deeper with our guides</h3><p>Ready for more? Our specialised guides cover everything from AI agents and cost control to marketing automation and staff management. Built specifically for restaurants.</p></div>
 </div>
 </div>
 </section>
+
 <section class="products" id="products">
 <div class="section-inner">
 <span class="section-tag reveal">Resources</span>
 <h2 class="reveal">Everything you need to get started.</h2>
 <div class="product-grid">
-<div class="product-card reveal"><span class="product-label live">Available now</span><h3>The Starter Guide</h3><p>The guide every restaurant manager needs to read. How to gain an AI assistant who takes dozens of tasks off your plate daily &#8212; for free. 15 minute read.</p></div>
-<div class="product-card reveal"><span class="product-label soon">Coming soon</span><h3>Deep-Dive Guides</h3><p>Detailed, step-by-step guides on specific topics &#8212; marketing with AI, cost control, staff management, menu engineering, review management and more.</p></div>
+<div class="product-card reveal"><span class="product-label live">Available now</span><h3>The Starter Guide</h3><p>The guide every restaurant manager needs to read. How to gain an AI assistant who takes dozens of tasks off your plate daily - for free. 15 minute read.</p></div>
+<div class="product-card reveal"><span class="product-label soon">Coming soon</span><h3>Deep-Dive Guides</h3><p>Detailed, step-by-step guides on specific topics - marketing with AI, cost control, staff management, menu engineering, review management and more.</p></div>
 <div class="product-card reveal"><span class="product-label soon">Coming soon</span><h3>Video Courses</h3><p>Watch-and-follow video walkthroughs. See exactly how to set up and use AI tools for your restaurant. Built for busy people, not tech people.</p></div>
-<div class="product-card reveal"><span class="product-label soon">Coming soon</span><h3>AI Agent Templates</h3><p>Pre-built AI agents ready to plug into your restaurant &#8212; review responder, booking manager, social media assistant, staff onboarding bot. Set up and go.</p></div>
+<div class="product-card reveal"><span class="product-label soon">Coming soon</span><h3>AI Agent Templates</h3><p>Pre-built AI agents ready to plug into your restaurant - review responder, booking manager, social media assistant, staff onboarding bot. Set up and go.</p></div>
 </div>
 </div>
 </section>
+
 <section class="founder">
 <div class="founder-inner reveal">
-<p class="founder-quote">"I spent 14 years managing restaurants before AI existed. If I'd had these tools, my life would have been unrecognisably easier. That's why I built Bridged."</p>
-<p class="founder-bio"><b>14 years as a restaurant manager.</b> Founder of <b>All You Can Reserve</b> (table booking) and <b>Olivia</b> (POS &amp; self-order). Now connecting the industry with the AI tools that can genuinely transform how they work.</p>
+<p class="founder-quote">"I spent 14 years managing restaurants before AI existed. If I had had these tools, my life would have been unrecognisably easier. That is why I built Bridged."</p>
+<p class="founder-bio"><b>14 years as a restaurant manager.</b> Founder of <b>All You Can Reserve</b> (table booking) and <b>Olivia</b> (POS and self-order). Now connecting the industry with the AI tools that can genuinely transform how they work.</p>
 </div>
 </section>
+
 <section class="cta" id="join">
-<h2 class="reveal">Ready to see what's possible?</h2>
+<h2 class="reveal">Ready to see what is possible?</h2>
 <p class="cta-desc reveal">Download the free starter guide and take the first step. Your AI assistant is waiting.</p>
 <div class="email-row reveal">
 <input type="email" placeholder="your@email.com" aria-label="Email">
-<button onclick="handleJoin()">Get the Guide &#8594;</button>
+<button onclick="handleJoin()">Get the Guide</button>
 </div>
 <p class="cta-note reveal">Free. No spam. Unsubscribe anytime.</p>
 </section>
+
 <footer>
 <div class="footer-inner">
 <div class="footer-logo">Bridged<span>.</span></div>
@@ -239,20 +876,64 @@ footer{padding:2.5rem;background:#0A0A0A;border-top:1px solid rgba(255,255,255,0
 <li><a href="#">LinkedIn</a></li>
 <li><a href="/de/">Deutsch</a></li>
 </ul>
-<div class="footer-copy">&copy; 2026 Bridged &#8212; Connecting restaurant managers with the infinite possibilities of AI.</div>
+<div class="footer-copy">2026 Bridged - Connecting restaurant managers with the infinite possibilities of AI.</div>
 </div>
 </footer>
+
 <script>
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-var tasks=document.querySelectorAll('.task-item');
-var badge=document.getElementById('taskBadge');
-var totalEl=document.getElementById('totalTime');
-var completed=0;
-function completeTask(i){if(i>=tasks.length)return;setTimeout(function(){tasks[i].classList.add('done');completed++;badge.textContent=completed+'/8 handled by AI';if(completed<=3)totalEl.textContent='< 1 min';else if(completed<=5)totalEl.textContent='~3 min';else if(completed<=7)totalEl.textContent='~7 min';else totalEl.textContent='Under 10 min';completeTask(i+1)},800+Math.random()*600)}
-var heroObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){setTimeout(function(){completeTask(0)},1500);heroObs.unobserve(e.target)}})},{threshold:0.3});
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) e.target.classList.add('vis');
+  });
+}, {threshold: 0.1, rootMargin: '0px 0px -30px 0px'});
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  obs.observe(el);
+});
+
+var tasks = document.querySelectorAll('.task-item');
+var badge = document.getElementById('taskBadge');
+var totalEl = document.getElementById('totalTime');
+var completed = 0;
+
+function completeTask(i) {
+  if (i >= tasks.length) return;
+  setTimeout(function() {
+    tasks[i].classList.add('done');
+    completed++;
+    badge.textContent = completed + '/8 handled by AI';
+    if (completed <= 3) totalEl.textContent = '< 1 min';
+    else if (completed <= 5) totalEl.textContent = '~3 min';
+    else if (completed <= 7) totalEl.textContent = '~7 min';
+    else totalEl.textContent = 'Under 10 min';
+    completeTask(i + 1);
+  }, 800 + Math.random() * 600);
+}
+
+var heroObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      setTimeout(function() { completeTask(0); }, 1500);
+      heroObs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.3});
+
 heroObs.observe(document.querySelector('.task-demo'));
-function handleJoin(){var input=document.querySelector('.email-row input');var btn=document.querySelector('.email-row button');if(input.value.indexOf('@')>-1){btn.textContent="You're in!";btn.style.background='#2D8C4E';btn.style.pointerEvents='none';input.style.display='none'}else{input.style.borderColor='#E8503E';input.placeholder='Enter a valid email'}}
+
+function handleJoin() {
+  var input = document.querySelector('.email-row input');
+  var btn = document.querySelector('.email-row button');
+  if (input.value.indexOf('@') > -1) {
+    btn.textContent = 'You are in!';
+    btn.style.background = '#2D8C4E';
+    btn.style.pointerEvents = 'none';
+    input.style.display = 'none';
+  } else {
+    input.style.borderColor = '#E8503E';
+    input.placeholder = 'Enter a valid email';
+  }
+}
 </script>
 </body>
 </html>
