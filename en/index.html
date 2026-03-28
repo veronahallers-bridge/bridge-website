@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bridged - Connecting Restaurant Managers with the Infinite Possibilities of AI</title>
-<meta name="description" content="Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability.">
+<title>bridge. - Connecting Restaurant Managers with the Infinite Possibilities of AI</title>
+<meta name="description" content="bridge shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability.">
 <link rel="canonical" href="https://ai-bridge.restaurant/en/">
 <link rel="alternate" hreflang="en" href="https://ai-bridge.restaurant/en/">
 <link rel="alternate" hreflang="de" href="https://ai-bridge.restaurant/de/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * {
   margin: 0;
@@ -28,26 +28,28 @@ body {
   overflow-x: hidden;
 }
 
+/* NAV */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(250, 250, 248, 0.9);
+  background: rgba(250, 250, 248, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .nav-logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: #0A0A0A;
   text-decoration: none;
+  z-index: 101;
 }
 
 .nav-logo span {
@@ -94,6 +96,87 @@ nav {
   border-radius: 6px;
 }
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 101;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger div {
+  width: 24px;
+  height: 2px;
+  background: #0A0A0A;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE MENU OVERLAY */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(250, 250, 248, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover {
+  color: #E8503E;
+}
+
+.mobile-menu .mob-cta {
+  background: #E8503E;
+  color: #FFFFFF !important;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.mobile-menu .mob-lang {
+  font-size: 1rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -108,7 +191,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 20vw;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.02);
@@ -153,7 +236,7 @@ nav {
 }
 
 .hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.8rem, 5.5vw, 4.5rem);
   font-weight: 800;
   line-height: 1.05;
@@ -247,7 +330,7 @@ nav {
 }
 
 .task-demo-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: #1A1A1A;
@@ -369,6 +452,7 @@ nav {
   50% { opacity: 0.5; transform: scale(1.3); }
 }
 
+/* WHAT */
 .what {
   padding: 7rem 2.5rem;
   background: #0A0A0A;
@@ -391,7 +475,7 @@ nav {
 }
 
 .what h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -433,7 +517,7 @@ nav {
 }
 
 .what-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
@@ -446,13 +530,14 @@ nav {
   font-weight: 300;
 }
 
+/* HOW */
 .how {
   padding: 7rem 2.5rem;
   background: #FAFAF8;
 }
 
 .how h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
@@ -468,7 +553,7 @@ nav {
 }
 
 .step-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 4rem;
   font-weight: 800;
   color: rgba(232, 80, 62, 0.08);
@@ -477,7 +562,7 @@ nav {
 }
 
 .step h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   color: #0A0A0A;
@@ -491,13 +576,14 @@ nav {
   font-weight: 300;
 }
 
+/* PRODUCTS */
 .products {
   padding: 7rem 2.5rem;
   background: #F4F4F2;
 }
 
 .products h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #0A0A0A;
@@ -545,7 +631,7 @@ nav {
 }
 
 .product-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: #0A0A0A;
@@ -559,6 +645,7 @@ nav {
   font-weight: 300;
 }
 
+/* FOUNDER */
 .founder {
   padding: 6rem 2.5rem;
   background: #FAFAF8;
@@ -571,7 +658,7 @@ nav {
 }
 
 .founder-quote {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 600;
   line-height: 1.4;
@@ -593,6 +680,7 @@ nav {
   font-weight: 500;
 }
 
+/* CTA */
 .cta {
   padding: 7rem 2.5rem;
   background: #0A0A0A;
@@ -602,7 +690,7 @@ nav {
 }
 
 .cta h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #FFFFFF;
@@ -669,6 +757,7 @@ nav {
   position: relative;
 }
 
+/* FOOTER */
 footer {
   padding: 2.5rem;
   background: #0A0A0A;
@@ -686,7 +775,7 @@ footer {
 }
 
 .footer-logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   color: #FFFFFF;
@@ -723,6 +812,7 @@ footer {
   color: rgba(255, 255, 255, 0.2);
 }
 
+/* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -739,41 +829,229 @@ footer {
   transform: translateY(0);
 }
 
+/* MOBILE */
 @media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
-  .hero { padding-top: 7rem; padding-bottom: 3rem; min-height: auto; }
-  .hero-right { order: -1; }
-  .nav-links { display: none; }
-  .what-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; gap: 1.5rem; }
-  .product-grid { grid-template-columns: 1fr; }
-  .email-row { flex-direction: column; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    padding: 6.5rem 1.5rem 3rem;
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .hero-ctas {
+    margin-top: 1.5rem;
+  }
+
+  .btn-main, .btn-ghost {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-bg-text {
+    display: none;
+  }
+
+  .task-demo {
+    padding: 1.2rem;
+  }
+
+  .task-demo-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .task-text {
+    font-size: 0.82rem;
+  }
+
+  .task-time {
+    font-size: 0.7rem;
+  }
+
+  .what {
+    padding: 4rem 1.5rem;
+  }
+
+  .what-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .what h2 {
+    font-size: 1.8rem;
+  }
+
+  .what-desc {
+    font-size: 0.95rem;
+  }
+
+  .how {
+    padding: 4rem 1.5rem;
+  }
+
+  .how h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .step-num {
+    font-size: 3rem;
+  }
+
+  .products {
+    padding: 4rem 1.5rem;
+  }
+
+  .products h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+
+  .founder {
+    padding: 4rem 1.5rem;
+  }
+
+  .founder-quote {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    padding: 4rem 1.5rem;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .email-row {
+    flex-direction: column;
+  }
+
+  .email-row input {
+    width: 100%;
+  }
+
+  .email-row button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-tag {
+    font-size: 0.72rem;
+  }
+
+  .task-text {
+    font-size: 0.78rem;
+  }
 }
 </style>
 </head>
 <body>
+
 <nav>
-<a href="/en/" class="nav-logo">Bridged<span>.</span></a>
+<a href="/en/" class="nav-logo">bridge<span>.</span></a>
 <ul class="nav-links">
 <li><a href="#what">What We Do</a></li>
 <li><a href="#how">How It Works</a></li>
 <li><a href="#products">Resources</a></li>
 <li><a href="/de/" class="lang-switch">DE</a></li>
-<li><a href="#join" class="nav-cta">Get the Free Guide</a></li>
+<li><a href="/en/guide/" class="nav-cta">Read the Starter Guide</a></li>
 </ul>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+<div></div>
+<div></div>
+<div></div>
+</button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+<a href="#what" onclick="toggleMenu()">What We Do</a>
+<a href="#how" onclick="toggleMenu()">How It Works</a>
+<a href="#products" onclick="toggleMenu()">Resources</a>
+<a href="/en/guide/" onclick="toggleMenu()" class="mob-cta">Read the Starter Guide</a>
+<a href="/de/" class="mob-lang">Deutsch</a>
+</div>
+
 <section class="hero">
-<div class="hero-bg-text">Bridged</div>
+<div class="hero-bg-text"bridge</div>
 <div class="hero-content">
 <div class="hero-left">
 <div class="hero-tag">For Restaurant Managers</div>
 <h1>Connecting you<br>with the <span class="accent">infinite<br>possibilities</span><br>of AI.</h1>
-<p class="hero-desc">Bridged shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability. From everyday tasks to autonomous AI agents that work around the clock.</p>
+<p class="hero-desc">bridge shows restaurant managers exactly how to use AI to reduce their daily workload and increase profitability. From everyday tasks to autonomous AI agents that work around the clock.</p>
 <div class="hero-ctas">
-<a href="#join" class="btn-main">Download Free Guide</a>
+<a href="/en/guide/" class="btn-main">Read the Starter Guide</a>
 <a href="#what" class="btn-ghost">See what's possible</a>
 </div>
 <div class="hero-meta">
@@ -809,7 +1087,7 @@ footer {
 
 <section class="what" id="what">
 <div class="section-inner">
-<span class="section-tag reveal">What Bridged Does</span>
+<span class="section-tag reveal">What bridge Does</span>
 <h2 class="reveal">We show you what AI can actually do for your restaurant.</h2>
 <p class="what-desc reveal">Not theory. Not hype. Real tasks being handled in real time. From the things eating your day to AI agents running while you sleep.</p>
 <div class="what-grid">
@@ -850,24 +1128,29 @@ footer {
 
 <section class="founder">
 <div class="founder-inner reveal">
-<p class="founder-quote">"I spent 14 years managing restaurants before AI existed. If I had had these tools, my life would have been unrecognisably easier. That is why I built Bridged."</p>
+<p class="founder-quote">"I spent 14 years managing restaurants before AI existed. If I had had these tools, my life would have been unrecognisably easier. That is why I built bridge."</p>
 <p class="founder-bio"><b>14 years as a restaurant manager.</b> Founder of <b>All You Can Reserve</b> (table booking) and <b>Olivia</b> (POS and self-order). Now connecting the industry with the AI tools that can genuinely transform how they work.</p>
 </div>
 </section>
 
 <section class="cta" id="join">
 <h2 class="reveal">Ready to see what is possible?</h2>
-<p class="cta-desc reveal">Download the free starter guide and take the first step. Your AI assistant is waiting.</p>
-<div class="email-row reveal">
-<input type="email" placeholder="your@email.com" aria-label="Email">
-<button onclick="handleJoin()">Get the Guide</button>
+<p class="cta-desc reveal">Our starter guide shows you exactly how AI can take dozens of daily tasks off your plate. No signup required. Just read it.</p>
+<div class="reveal" style="margin-bottom: 2.5rem;">
+<a href="/en/guide/" class="btn-main" style="font-size: 1.1rem; padding: 1.1rem 2.5rem;">Read the Starter Guide</a>
 </div>
-<p class="cta-note reveal">Free. No spam. Unsubscribe anytime.</p>
+<div style="width: 50px; height: 1px; background: rgba(255,255,255,0.1); margin: 0 auto 2rem;"></div>
+<p class="cta-desc reveal" style="font-size: 0.92rem; max-width: 460px;">If you want to stay updated on future guides and resources, you can leave your email below. We will only use it to let you know when something new is ready. No spam, no selling your data.</p>
+<form class="email-row reveal" action="https://app.kit.com/forms/9250629/subscriptions" method="post" data-sv-form="9250629">
+<input type="email" name="email_address" placeholder="your@email.com" aria-label="Email">
+<button type="submit">Stay Updated</button>
+</form>
+<p class="cta-note reveal">Completely optional. We respect your inbox.</p>
 </section>
 
 <footer>
 <div class="footer-inner">
-<div class="footer-logo">Bridged<span>.</span></div>
+<div class="footer-logo">bridge<span>.</span></div>
 <ul class="footer-links">
 <li><a href="#what">What We Do</a></li>
 <li><a href="#how">How It Works</a></li>
@@ -876,11 +1159,23 @@ footer {
 <li><a href="#">LinkedIn</a></li>
 <li><a href="/de/">Deutsch</a></li>
 </ul>
-<div class="footer-copy">2026 Bridged - Connecting restaurant managers with the infinite possibilities of AI.</div>
+<div class="footer-copy">2026 bridge. - Connecting restaurant managers with the infinite possibilities of AI.</div>
 </div>
 </footer>
 
 <script>
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var burger = document.querySelector('.hamburger');
+  menu.classList.toggle('active');
+  burger.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+
 var obs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) e.target.classList.add('vis');
@@ -921,19 +1216,7 @@ var heroObs = new IntersectionObserver(function(entries) {
 
 heroObs.observe(document.querySelector('.task-demo'));
 
-function handleJoin() {
-  var input = document.querySelector('.email-row input');
-  var btn = document.querySelector('.email-row button');
-  if (input.value.indexOf('@') > -1) {
-    btn.textContent = 'You are in!';
-    btn.style.background = '#2D8C4E';
-    btn.style.pointerEvents = 'none';
-    input.style.display = 'none';
-  } else {
-    input.style.borderColor = '#E8503E';
-    input.placeholder = 'Enter a valid email';
-  }
-}
+// Email form is now handled by Kit directly
 </script>
 </body>
 </html>
