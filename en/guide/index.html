@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Guide Every Restaurant Manager Needs to Read - bridge.</title>
+<meta name="description" content="How to gain an AI assistant who takes dozens of tasks off your plate daily - for free. 15 minute read. No tech skills required.">
+<link rel="canonical" href="https://ai-bridge.restaurant/en/guide/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #FAFAF8;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+/* NAV */
+.guide-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 250, 248, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.guide-nav-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  text-decoration: none;
+}
+
+.guide-nav-logo span {
+  color: #E8503E;
+}
+
+.guide-nav-cta {
+  background: #E8503E;
+  color: #FFFFFF;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.guide-nav-cta:hover {
+  background: #D4422F;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #E8503E;
+  z-index: 101;
+  width: 0%;
+  transition: width 0.1s;
+}
+
+/* HERO */
+.guide-hero {
+  background: #0A0A0A;
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.guide-hero-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #E8503E;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.guide-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.guide-hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1.2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.guide-hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  flex-wrap: wrap;
+}
+
+/* CONTENT */
+.guide-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.guide-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.guide-content p strong,
+.guide-content p b {
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+/* SECTION HEADERS */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #E8503E;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+  display: block;
+}
+
+.guide-content h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: #0A0A0A;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+.guide-content h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+/* DIVIDER */
+.divider {
+  width: 60px;
+  height: 2px;
+  background: #E8E8E8;
+  margin: 2.5rem 0;
+}
+
+.divider-accent {
+  background: #E8503E;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: #FFF1EE;
+  border-left: 4px solid #E8503E;
+  border-radius: 0 10px 10px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.highlight p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.highlight-green {
+  background: #EEFBF2;
+  border-left-color: #2D8C4E;
+}
+
+.highlight-amber {
+  background: #FFF8E1;
+  border-left-color: #F5A623;
+}
+
+.highlight-blue {
+  background: #F0F4FF;
+  border-left-color: #4466AA;
+}
+
+/* TASK CARDS */
+.task-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #E8503E;
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.task-card-problem {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0.4rem;
+}
+
+.task-card-solution {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.task-card-time {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2D8C4E;
+}
+
+/* TOTAL BOX */
+.total-box {
+  background: #FFF1EE;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.total-box p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 0;
+}
+
+/* STEP CARDS */
+.step-card {
+  background: #FFFBF7;
+  border-left: 4px solid #E8503E;
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.step-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #E8503E;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+.step-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-bottom: 0.6rem;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* CHAT BUBBLES */
+.chat-you {
+  background: #F0F4FF;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.chat-ai {
+  background: #EEFBF2;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.chat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.chat-you .chat-label {
+  color: #4466AA;
+}
+
+.chat-ai .chat-label {
+  color: #2D8C4E;
+}
+
+.chat-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #333;
+}
+
+.chat-text strong {
+  color: #1A1A1A;
+}
+
+/* LISTS IN BOXES */
+.info-box {
+  background: #EEFBF2;
+  border-left: 4px solid #2D8C4E;
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.info-box-amber {
+  background: #FFF8E1;
+  border-left-color: #F5A623;
+}
+
+.info-box-blue {
+  background: #F0F4FF;
+  border-left-color: #4466AA;
+}
+
+.info-box h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0.6rem;
+}
+
+.info-box p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.guide-cta {
+  background: #0A0A0A;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.guide-cta h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.guide-cta p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+
+.guide-cta .surface-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  font-weight: 500;
+  max-width: 520px;
+  margin: 0 auto 1rem;
+}
+
+.guide-cta .accent-text {
+  color: #E8503E;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.guide-cta-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 420px;
+  margin: 2rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.guide-cta-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  outline: none;
+  font-family: inherit;
+}
+
+.guide-cta-form input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.guide-cta-form button {
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  background: #E8503E;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.guide-cta-form button:hover {
+  background: #D4422F;
+}
+
+.guide-cta-note {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.2);
+  margin-top: 0.8rem;
+}
+
+/* FOOTER */
+.guide-footer {
+  background: #0A0A0A;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.guide-footer p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.guide-footer a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+
+/* REVEAL */
+.rv {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.5s ease;
+}
+
+.rv.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .guide-hero {
+    padding: 5.5rem 1.2rem 3rem;
+  }
+
+  .guide-content {
+    padding: 2rem 1.2rem;
+  }
+
+  .guide-hero-meta {
+    gap: 0.8rem;
+  }
+
+  .guide-cta-form {
+    flex-direction: column;
+  }
+
+  .guide-cta-form input {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .guide-cta-form button {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="guide-nav">
+  <a href="/en/" class="guide-nav-logo">bridge<span>.</span></a>
+  <a href="/en/" class="guide-nav-cta">Back to Home</a>
+</nav>
+
+<!-- HERO -->
+<header class="guide-hero">
+  <span class="guide-hero-label">Free Guide</span>
+  <h1>The Guide Every Restaurant Manager Needs to Read.</h1>
+  <p class="guide-hero-sub">How to gain an AI assistant who takes dozens of tasks off your plate daily - for free!</p>
+  <div class="guide-hero-meta">
+    <span>15 mins reading time</span>
+    <span>No tech skills required</span>
+    <span>Zero cost</span>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<article class="guide-content">
+
+  <p><strong>You manage a restaurant, bar or cafe and you have been holding everything together with sheer willpower.</strong></p>
+
+  <p>Your days look something like this.</p>
+
+  <p>Someone called in sick and the rota needs reworking. A supplier just changed their prices. Your website still shows last season's menu. There's an unfair complaint on Google you still have not responded to. Dozens of unanswered emails about table reservations and a lost scarf. The chef is pissed you still have not advertised for a new sous chef. Payroll is due and you have not double-checked everyone's hours. To top it all off the coffee machine is spitting out watery coffee again and you have not sat down for more than 2 minutes all day.</p>
+
+  <p><strong>Somewhere in all of this, you are supposed to actually run a restaurant and interact with your customers.</strong></p>
+
+  <div class="divider"></div>
+
+  <p>I get it. I have spent 23 years in this industry. 14 of those as a general manager across very different restaurants. I also founded a table reservation system, a POS system and a self-order and takeaway platform - which meant I did not just see the chaos inside one restaurant, I saw it inside hundreds.</p>
+
+  <p><strong>I did all of this before AI existed. And I can tell you honestly: if I had had what you are about to discover, my life would have been unrecognisably easier.</strong></p>
+
+  <div class="divider"></div>
+
+  <p>You are probably reading this because everyone keeps telling you: <strong>"You should use AI!"</strong></p>
+
+  <p>And your reaction is probably somewhere between <strong>"I don't have time for this"</strong> and <strong>"I wouldn't even know where to start."</strong></p>
+
+  <p><strong>This guide exists because of one simple truth.</strong></p>
+
+  <div class="highlight">
+    <p>AI is the easiest technology you will ever use. Easier than your POS system. Easier than Excel. Easier than figuring out that stupid coffee machine.</p>
+  </div>
+
+  <p>But this is not a guide about asking AI what the weather is. This is about showing you, step by step, how AI can handle the real work that has been burying you.</p>
+
+  <!-- WHAT AI CAN DO -->
+  <span class="section-label rv">What AI Can Actually Do For You</span>
+  <h2 class="rv">Every one of these pain points? AI can help. Right now.</h2>
+
+  <p class="rv">Let's go back to that nightmare day you just read about. Here's what AI does with each of those problems - and how long it takes.</p>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">That unfair Google review you have not replied to?</div>
+    <div class="task-card-solution">Paste it into AI. Ask for a professional, measured reply. Get one that's better than anything you'd write at midnight after a 14-hour shift.</div>
+    <div class="task-card-time">20 seconds</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">The sous chef job ad you keep putting off?</div>
+    <div class="task-card-solution">Tell AI the role, the salary, the vibe of your restaurant. Get a polished, ready-to-post job listing.</div>
+    <div class="task-card-time">30 seconds</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">The 15 reservation emails and the lost scarf?</div>
+    <div class="task-card-solution">Paste them in. AI drafts individual, personalised replies to every single one. You review and hit send.</div>
+    <div class="task-card-time">2 minutes for all of them</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">Supplier changed their prices?</div>
+    <div class="task-card-solution">Give AI your menu and the new costs. It recalculates your margins and suggests new pricing to protect your profit.</div>
+    <div class="task-card-time">2 minutes</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">Website still showing last season's menu?</div>
+    <div class="task-card-solution">Give AI your new dishes. Get updated descriptions with allergens, dietary info and translations if you need them.</div>
+    <div class="task-card-time">3 minutes</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">Payroll hours need checking?</div>
+    <div class="task-card-solution">Paste the timesheet data. AI spots discrepancies, flags overtime and calculates totals.</div>
+    <div class="task-card-time">1 minute</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">New starter on Monday and no training manual?</div>
+    <div class="task-card-solution">Tell AI your restaurant type and the role. Get a complete first-day checklist covering everything from uniform to closing duties.</div>
+    <div class="task-card-time">1 minute</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">The coffee machine spitting out watery coffee?</div>
+    <div class="task-card-solution">Describe the symptoms and the model. AI diagnoses the most likely causes and walks you through fixing it - before you call out an expensive technician.</div>
+    <div class="task-card-time">30 seconds</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">Rota needs reworking because someone called in sick?</div>
+    <div class="task-card-solution">Give AI your staff list, their availability and the shift that needs covering. It builds you options.</div>
+    <div class="task-card-time">1 minute</div>
+  </div>
+
+  <div class="task-card rv">
+    <div class="task-card-problem">Instagram has not been posted on in weeks?</div>
+    <div class="task-card-solution">Describe today's special or snap a photo. AI writes a caption with hashtags ready to post.</div>
+    <div class="task-card-time">15 seconds</div>
+  </div>
+
+  <div class="total-box rv">
+    <p>That's your entire nightmare day. Every single problem, handled. Total time? Under 15 minutes. And you have not left your chair.</p>
+  </div>
+
+  <!-- HOW TO GET STARTED -->
+  <span class="section-label rv">How To Get Started</span>
+  <h2 class="rv">How to gain your free AI assistant in 5 minutes.</h2>
+
+  <p class="rv"><strong>This is not theory. Let's set you up right now.</strong></p>
+
+  <div class="step-card rv">
+    <div class="step-num">Step 1</div>
+    <div class="step-title">Pick your tool</div>
+    <p>You have two main options. Both are free. Both work on your phone and computer.</p>
+    <p><strong>ChatGPT</strong> (chat.openai.com) - The most popular AI tool in the world. Create a free account in 30 seconds. You can also create a custom assistant that remembers your restaurant's details every time you chat.</p>
+    <p><strong>Claude</strong> (claude.ai) - Made by Anthropic. Excellent for longer tasks like analysing documents, writing menus, or working through complex problems. Also free.</p>
+    <p>Pick either one. Seriously - you can't go wrong. Create an account with your email and you'll see a text box. That's the whole interface.</p>
+  </div>
+
+  <div class="step-card rv">
+    <div class="step-num">Step 2</div>
+    <div class="step-title">Make it YOUR assistant</div>
+    <p>This is the part nobody tells you. Don't just ask random questions. Start by telling AI about your business. This is what turns a generic tool into your personal assistant.</p>
+    <div class="chat-you">
+      <span class="chat-label">Example</span>
+      <div class="chat-text">"I manage a 60-cover Italian restaurant in Birmingham. We have 12 staff. Our average spend per head is 28 pounds. We are open Tuesday to Sunday. I am going to be using you regularly to help me with admin, staff management, marketing and daily operations."</div>
+    </div>
+    <p>Now it's not a generic chatbot. It's an assistant who understands your restaurant, your team and your challenges.</p>
+  </div>
+
+  <div class="step-card rv">
+    <div class="step-num">Step 3</div>
+    <div class="step-title">Give it a real task</div>
+    <p>Not a test. Not "what's the capital of France." A real task from today's to-do list. Something you have been putting off. Something that has been sitting in the back of your mind all week.</p>
+    <p>That job ad. That Google review. That email to your landlord. That training checklist for the new starter. Pick one. Type it. Watch what happens.</p>
+  </div>
+
+  <!-- WORKED EXAMPLE -->
+  <span class="section-label rv">See It In Action</span>
+  <h2 class="rv">A real example from start to finish.</h2>
+
+  <p class="rv">Let's say the chef has been on your case about the sous chef position. You have been meaning to write the ad for two weeks. Here's exactly what happens:</p>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">I need to hire a sous chef for a busy Italian restaurant in Manchester city centre. Salary around 35k. We need someone with at least 3 years experience who can handle a fast-paced kitchen. We are a family-run place with a good team culture. Write me a job ad that sounds professional but also like a place people would actually want to work.</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">
+      <strong>Sous Chef - [Restaurant Name], Manchester City Centre</strong><br><br>
+      We are a family-run Italian restaurant in the heart of Manchester and we are looking for a Sous Chef to join our close-knit kitchen team.<br><br>
+      <strong>The role:</strong> You'll work alongside our Head Chef to deliver authentic Italian dishes in a fast-paced, high-volume kitchen. You'll help lead the team, manage prep, maintain standards and bring energy to every service.<br><br>
+      <strong>What we are looking for:</strong><br>
+      - Minimum 3 years experience in a similar role<br>
+      - Passion for Italian cuisine<br>
+      - Ability to stay calm under pressure<br>
+      - Strong leadership and communication skills<br><br>
+      <strong>What we offer:</strong><br>
+      - 35,000 salary<br>
+      - Staff meals on every shift<br>
+      - A supportive, family-feel working environment<br>
+      - Genuine opportunities to grow with us<br><br>
+      Interested? Send your CV and a few lines about yourself to [email].
+    </div>
+  </div>
+
+  <div class="highlight rv">
+    <p>That took 30 seconds. Not 30 minutes staring at a blank screen. The chef's happy. It's posted. Done. Move on to the next thing.</p>
+  </div>
+
+  <p class="rv">And if it's not quite right? Just tell AI what to change:</p>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">Good but make it sound less corporate. We are a casual place. And add that we close on Mondays.</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">Done - here's the updated version with a more relaxed tone and Monday closures added to the benefits...</div>
+  </div>
+
+  <p class="rv"><strong>That's how every interaction works. You ask. AI delivers. You refine. It gets better. It's a conversation, not a one-shot search engine.</strong></p>
+
+  <!-- THE SECRET -->
+  <span class="section-label rv">The Secret</span>
+  <h2 class="rv">The one thing that separates people who love AI from people who gave up.</h2>
+
+  <p class="rv">Most people try AI once, get a decent answer, and stop.</p>
+
+  <p class="rv">But the real power is in the follow-up. AI is not a search engine. It's a conversation. The more you push, the more useful it gets.</p>
+
+  <p class="rv"><strong>Watch what happens when you keep going:</strong></p>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">What's a good food cost percentage for a casual restaurant?</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">For casual dining, a healthy food cost is typically between 28-35% of revenue...</div>
+  </div>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">Mine is at 40%. That's bad right? How do I bring it down?</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">40% is above average. Here are 6 common causes and practical fixes: portion sizes, supplier pricing, waste tracking, menu engineering...</div>
+  </div>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">Explain menu engineering. I have heard the term but never properly understood it.</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">Menu engineering means categorising your dishes by profitability and popularity into four groups: Stars (popular + profitable), Puzzles (profitable but unpopular), Plowhorses (popular but low margin), and Dogs (neither)...</div>
+  </div>
+
+  <div class="chat-you rv">
+    <span class="chat-label">You</span>
+    <div class="chat-text">Do this for my menu. I have 22 dishes. I'll give you the sales data and costs.</div>
+  </div>
+
+  <div class="chat-ai rv">
+    <span class="chat-label">AI</span>
+    <div class="chat-text">Perfect. Share the dish names, weekly sales volume and food cost per dish. I'll build the full matrix for you and highlight what to promote, reprice or remove.</div>
+  </div>
+
+  <div class="highlight rv">
+    <p>Four messages. You went from a basic question to having a personal business consultant analysing your actual menu data. For free. At midnight. In your pyjamas.</p>
+  </div>
+
+  <!-- FREE VS PAID -->
+  <span class="section-label rv">A Quick Word</span>
+  <h2 class="rv">Free vs paid.</h2>
+
+  <p class="rv">Everything in this guide works with the free versions of ChatGPT and Claude. Every single task. No credit card needed. Start there.</p>
+
+  <p class="rv"><strong>But let's be honest with you.</strong></p>
+
+  <p class="rv">Once you start using AI regularly, you will notice the free models have limits - slower responses, shorter answers, less nuance. The paid versions (around 20 pounds a month for either ChatGPT Plus or Claude Pro) are a massive step up. The difference in quality is genuinely night and day.</p>
+
+  <div class="highlight-amber highlight rv">
+    <p><strong>Think about it this way:</strong> 20 pounds a month for an assistant that saves you hours every single day. That's less than a round of drinks. Less than a single cover on a Friday night. For something that can genuinely transform how you run your business.</p>
+  </div>
+
+  <p class="rv">But don't rush into it. Play with the free tier first. Get comfortable. Try the tasks in this guide. If you find yourself thinking "this is actually incredible" - and you will - then upgrade.</p>
+
+  <p class="rv">You can always cancel and go back to free. Both platforms make it easy. No contracts, no hassle.</p>
+
+  <div class="highlight-green highlight rv">
+    <p>If the free tier makes you think "wow, this is so helpful" - the paid models will blow you away.</p>
+  </div>
+
+  <!-- BEING HONEST -->
+  <span class="section-label rv">Being Honest</span>
+  <h2 class="rv">What AI can and can't do.</h2>
+
+  <p class="rv">AI is powerful. But it's not magic. Being honest about its limits will actually make you better at using it.</p>
+
+  <div class="info-box rv">
+    <h4>AI is brilliant at:</h4>
+    <p>- Writing, rewriting and improving any text - emails, menus, job ads, social posts, review replies</p>
+    <p>- Explaining complex things in plain language</p>
+    <p>- Brainstorming and generating creative ideas on demand</p>
+    <p>- Analysing data you give it - costs, sales figures, rotas, timesheets</p>
+    <p>- Translating menus and communications naturally</p>
+    <p>- Creating checklists, SOPs and training materials from scratch</p>
+    <p>- Troubleshooting equipment problems</p>
+    <p>- Giving you a second opinion on any decision</p>
+  </div>
+
+  <div class="info-box info-box-amber rv">
+    <h4>Always double-check:</h4>
+    <p>- Specific numbers, legal requirements and regulations</p>
+    <p>- Very recent events or changes - AI may not have today's news</p>
+    <p>- Hyper-local details about your specific area</p>
+    <p>- Anything involving your brand's unique voice - use AI as a starting point, then add your personality</p>
+  </div>
+
+  <div class="info-box info-box-blue rv">
+    <h4>AI will never replace:</h4>
+    <p>- The warmth of your smile when a guest walks in</p>
+    <p>- The instinct you have built over years of reading a room</p>
+    <p>- The taste of a dish made by human hands</p>
+    <p>- The relationships you build with your regulars</p>
+    <p>- <strong>You.</strong> AI is your assistant. Not your replacement.</p>
+  </div>
+
+  <div class="highlight rv">
+    <p><strong>The golden rule:</strong> Use AI for the work you have to do so you have more time for the work you love to do. Let it handle the admin, the emails, the writing. You handle the people, the food, the magic.</p>
+  </div>
+
+</article>
+
+<!-- CTA / CLOSING -->
+<section class="guide-cta">
+  <h2>Now close this guide and open a chat.</h2>
+  <p>No course to complete. No software to install. No budget required. Just you, a text box and a real task.</p>
+  <p><strong style="color: #FFFFFF;">The restaurant industry is one of the hardest industries in the world. You already survived that. AI is easy by comparison. You have got this.</strong></p>
+
+  <div style="width: 50px; height: 2px; background: #E8503E; margin: 2rem auto;"></div>
+
+  <p class="surface-text"><strong style="color: #FFFFFF;">We hope you enjoyed this introduction.</strong></p>
+  <p>If this guide opened your eyes to what is possible, we have built detailed guides that go much deeper:</p>
+
+  <div style="text-align: left; max-width: 520px; margin: 1.5rem auto; color: rgba(255,255,255,0.6); font-size: 0.92rem; line-height: 1.7;">
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Build your restaurant's website with AI</strong> - create and maintain a professional website without third-party platforms or developers.</p>
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Create stunning menus with AI</strong> - professionally design, format and write beautiful menus that automatically sync to your website.</p>
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Run your social media with AI</strong> - from content creation to scheduling. A full week of posts in 20 minutes.</p>
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Manage your team with AI</strong> - let AI communicate with your staff. Briefings, event prep, menu plans, shift reminders - clear, professional messages your team actually reads.</p>
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Autonomous AI agents explained</strong> - understand the difference between what we covered here and fully autonomous agents that work independently around the clock.</p>
+    <p style="margin-bottom: 0.8rem;"><strong style="color: #FFFFFF;">Set up your own AI agent</strong> - step by step, from zero to a running agent for your restaurant.</p>
+  </div>
+
+  <p style="color: rgba(255,255,255,0.5); font-size: 0.92rem; max-width: 480px; margin: 1.5rem auto;">Each guide is available for 9 dollars - a small investment that pays for itself many times over. Every guide is regularly updated so the information is always current.</p>
+
+  <div style="width: 50px; height: 1px; background: rgba(255,255,255,0.1); margin: 2rem auto;"></div>
+
+  <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; max-width: 480px; margin: 0 auto 0.5rem;"><strong style="color: #FFFFFF;">You just read the whole thing. No email required.</strong></p>
+  <p style="color: rgba(255,255,255,0.45); font-size: 0.88rem; max-width: 480px; margin: 0 auto 1.5rem; line-height: 1.65;">We made this guide freely available because we believe in showing value before asking for anything. If you found it useful and want to stay updated on future guides, you can leave your email below. We will only use it to let you know when something new is ready. No spam, no selling your data.</p>
+
+  <form class="guide-cta-form" action="https://app.kit.com/forms/9250629/subscriptions" method="post" data-sv-form="9250629">
+    <input type="email" name="email_address" placeholder="your@email.com" aria-label="Email">
+    <button type="submit">Stay Updated</button>
+  </form>
+  <p class="guide-cta-note">Completely optional. We respect your inbox.</p>
+
+  <p style="margin-top: 2rem; color: rgba(255,255,255,0.3); font-size: 0.85rem;">Know a restaurant manager who needs this? Share it.<br>The more of us who embrace AI, the stronger the whole industry gets.</p>
+  <p style="margin-top: 2rem; color: rgba(255,255,255,0.15); font-size: 0.75rem;">2026 bridge. - For the people who feed the world.</p>
+</section>
+
+<script>
+// Progress bar
+window.addEventListener('scroll', function() {
+  var total = document.documentElement.scrollHeight - window.innerHeight;
+  var progress = (window.scrollY / total) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+
+// Scroll reveal
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) e.target.classList.add('vis');
+  });
+}, {threshold: 0.1, rootMargin: '0px 0px -30px 0px'});
+
+document.querySelectorAll('.rv').forEach(function(el) {
+  obs.observe(el);
+});
+
+// Email form is now handled by Kit directly
+</script>
+
+</body>
+</html>
