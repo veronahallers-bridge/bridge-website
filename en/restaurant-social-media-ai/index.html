@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use AI for Restaurant Social Media | bridge.</title>
+<meta name="description" content="Learn how to use AI to create a full week of restaurant social media content in under 30 minutes. Practical prompts, real examples, no fluff. Built by a restaurant manager with 14 years in the industry.">
+<link rel="canonical" href="https://ai-bridge.restaurant/en/restaurant-social-media-ai/" />
+<link rel="alternate" hreflang="en" href="https://ai-bridge.restaurant/en/restaurant-social-media-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://ai-bridge.restaurant/en/restaurant-social-media-ai/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Use AI for Restaurant Social Media | bridge." />
+<meta property="og:description" content="Create a full week of restaurant social media content in under 30 minutes using AI. Practical prompts, real examples, no fluff." />
+<meta property="og:url" content="https://ai-bridge.restaurant/en/restaurant-social-media-ai/" />
+<meta property="og:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="bridge." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Use AI for Restaurant Social Media | bridge." />
+<meta name="twitter:description" content="Create a full week of restaurant social media content in under 30 minutes using AI. Practical prompts, real examples, no fluff." />
+<meta name="twitter:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="bridge." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Use AI for Restaurant Social Media",
+  "description": "Learn how to use AI to create a full week of restaurant social media content in under 30 minutes.",
+  "author": { "@type": "Person", "name": "Franky", "jobTitle": "Founder" },
+  "publisher": { "@type": "Organization", "name": "bridge.", "url": "https://ai-bridge.restaurant" },
+  "mainEntityOfPage": "https://ai-bridge.restaurant/en/restaurant-social-media-ai/",
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-05"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #E8E6E0;
+    --cobalt: #0055FF;
+    --cobalt-dark: #003BB5;
+    --white: #FAFAF8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:var(--cream); color:var(--cobalt); overflow-x:hidden; }
+  .mono { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; }
+
+  /* GRID */
+  .grid-overlay { position:fixed; top:0; left:0; right:0; bottom:0; pointer-events:none; z-index:1; display:flex; justify-content:space-between; padding:0 2rem; }
+  .grid-overlay .line { width:1px; height:100%; background:var(--cobalt); opacity:0.06; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.25rem 2.5rem; background:var(--cobalt); }
+  .nav-logo { display:flex; align-items:center; gap:0.75rem; color:var(--white); text-decoration:none; }
+  .logo-mark { width:36px; height:36px; border:2px solid var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.65rem; }
+  .nav-logo > span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:0.8rem; font-weight:500; }
+  .nav-links { display:flex; gap:2.5rem; align-items:center; }
+  .nav-links a { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--white); text-decoration:none; opacity:0.8; transition:opacity 0.3s; }
+  .nav-links a:hover { opacity:1; }
+  .nav-cta { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--cobalt) !important; background:var(--white); border:none; padding:0.65rem 1.2rem; cursor:pointer; text-decoration:none; transition:all 0.3s; font-weight:600; opacity:1 !important; display:inline-block; }
+  .nav-cta:hover { background:var(--cream); }
+
+  /* SECTION HELPERS */
+  .section-label { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.7rem; color:var(--cobalt); opacity:0.5; margin-bottom:2rem; display:flex; justify-content:space-between; }
+  .section-label .code { opacity:0.4; }
+  .hero-download { display:inline-block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.75rem; color:var(--cobalt); background:var(--white); padding:0.5rem 2rem; text-decoration:none; transition:all 0.3s; }
+  .hero-download:hover { background:var(--cream); }
+
+  /* HERO */
+  .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:2.5rem; padding-top:80px; background:var(--cobalt); overflow:hidden; }
+  .hero-lines { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; }
+  .hero-lines::before { content:''; position:absolute; top:-50%; left:5%; width:90%; height:200%; background:repeating-linear-gradient(-30deg,transparent,transparent 18px,rgba(255,255,255,0.03) 18px,rgba(255,255,255,0.03) 20px); }
+  .hero-title { font-size:clamp(3.5rem,9vw,7rem); font-weight:800; color:var(--white); line-height:0.92; letter-spacing:-0.04em; margin-bottom:2rem; animation:fadeInUp 1s 0.3s both; }
+  .hero-title .dot { color:rgba(255,255,255,0.35); }
+  .hero-subtitle-box { max-width:550px; color:var(--white); opacity:0.85; font-size:1.05rem; line-height:1.6; font-weight:300; margin-bottom:3rem; animation:fadeInUp 1s 0.6s both; }
+  .hero-subtitle-box::before { content:''; display:block; width:1px; height:50px; background:var(--white); opacity:0.4; margin-bottom:1.5rem; }
+  .hero-cta-wrap { animation:fadeInUp 1s 0.9s both; }
+  .hero-cta-sub { display:block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.5rem; letter-spacing:0.06em; color:var(--white); opacity:0.4; margin-top:0.8rem; }
+  @keyframes fadeInUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+
+  /* MARQUEE */
+  .marquee-section { background:var(--cream); border-top:1px solid rgba(0,85,255,0.08); border-bottom:1px solid rgba(0,85,255,0.08); padding:1.8rem 0; overflow:hidden; }
+  .marquee-track { display:flex; gap:4rem; animation:marquee 25s linear infinite; width:max-content; }
+  .marquee-track span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.15em; font-size:0.7rem; color:var(--cobalt); opacity:0.35; white-space:nowrap; display:flex; align-items:center; gap:4rem; }
+  .marquee-track span::after { content:'\25C6'; font-size:0.4rem; opacity:0.5; }
+  @keyframes marquee { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+
+  /* PROBLEM — cream */
+  .problem { background:var(--cream); padding:6rem 2.5rem; }
+  .section-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--cobalt); line-height:0.95; letter-spacing:-0.03em; margin-bottom:1rem; }
+  .section-desc { font-size:1rem; color:var(--cobalt); opacity:0.55; max-width:550px; line-height:1.6; margin-bottom:3rem; }
+  .time-list { list-style:none; max-width:600px; }
+  .time-list li { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid rgba(0,85,255,0.08); font-size:0.95rem; color:var(--cobalt); opacity:0.6; }
+  .task-time { font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.05em; opacity:0.7; }
+  .time-total { display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:2px solid var(--cobalt); max-width:600px; font-weight:700; font-size:1rem; color:var(--cobalt); }
+  .time-total .task-time { font-weight:700; font-size:0.9rem; opacity:1; }
+  .section-note { font-size:0.9rem; color:var(--cobalt); opacity:0.45; max-width:550px; line-height:1.6; margin-top:2rem; }
+
+  /* WHAT AI DOES — cobalt, step-card style */
+  .what-section { background:var(--cobalt); padding:6rem 2.5rem; }
+  .what-section .section-title { color:var(--white); }
+  .what-section .section-desc { color:var(--white); }
+  .what-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; }
+  .what-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2.5rem 2rem; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s; }
+  .what-card.visible { opacity:1; transform:translateY(0); }
+  .what-card .card-num { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.35; margin-bottom:1rem; }
+  .what-card h4 { font-size:1.3rem; font-weight:600; color:var(--white); margin-bottom:1rem; }
+  .what-card p { font-size:0.82rem; color:var(--white); opacity:0.5; line-height:1.6; }
+
+  /* COMPARISON — split layout like homepage .why */
+  .comparison { display:grid; grid-template-columns:1fr 1fr; min-height:70vh; }
+  .comp-left { background:var(--cream); padding:6rem 2.5rem; display:flex; flex-direction:column; justify-content:center; position:relative; }
+  .comp-left::after { content:''; position:absolute; right:0; top:0; width:1px; height:100%; background:var(--cobalt); opacity:0.1; }
+  .comp-title { font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:0.95; letter-spacing:-0.03em; margin-bottom:2rem; }
+  .comp-left .comp-title { color:var(--cobalt); }
+  .comp-right .comp-title { color:var(--white); }
+  .comp-list { list-style:none; }
+  .comp-list li { font-size:0.9rem; line-height:1.6; padding:0.7rem 0; }
+  .comp-left .comp-list li { color:var(--cobalt); opacity:0.55; border-bottom:1px solid rgba(0,85,255,0.06); }
+  .comp-right { background:var(--cobalt); padding:6rem 3rem; display:flex; flex-direction:column; justify-content:center; }
+  .comp-right .comp-list li { color:var(--white); opacity:0.7; border-bottom:1px solid rgba(255,255,255,0.08); }
+
+  /* METHOD — service-card style */
+  .method { background:var(--cream); padding:6rem 2.5rem; }
+  .method-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; max-width:1100px; background:rgba(0,85,255,0.1); }
+  .method-card { background:var(--cream); padding:2.5rem 2rem; transition:background 0.3s; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s,background 0.3s; }
+  .method-card.visible { opacity:1; transform:translateY(0); }
+  .method-card:hover { background:var(--white); }
+  .method-card .step-num { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--cobalt); opacity:0.4; margin-bottom:1rem; }
+  .method-card h3 { font-size:1.15rem; font-weight:600; color:var(--cobalt); margin-bottom:0.6rem; line-height:1.3; }
+  .method-card p { font-size:0.8rem; color:var(--cobalt); opacity:0.5; line-height:1.6; }
+
+  /* PROMPT — cobalt */
+  .prompt-section { background:var(--cobalt); padding:6rem 2.5rem; }
+  .prompt-section .section-title { color:var(--white); }
+  .prompt-section .section-desc { color:var(--white); }
+  .prompt-box { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2.5rem 2rem; max-width:700px; }
+  .prompt-label { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.35; margin-bottom:1.5rem; display:block; }
+  .prompt-text { font-family:'IBM Plex Mono',monospace; font-size:0.78rem; line-height:1.8; color:var(--white); opacity:0.7; }
+  .prompt-section .section-note { color:var(--white); opacity:0.4; }
+
+  /* WHO — cream */
+  .who { background:var(--cream); padding:6rem 2.5rem; }
+  .who-list { list-style:none; max-width:600px; }
+  .who-list li { font-size:0.95rem; line-height:1.6; color:var(--cobalt); opacity:0.6; padding:0.8rem 0 0.8rem 1.5rem; position:relative; border-bottom:1px solid rgba(0,85,255,0.08); }
+  .who-list li::before { content:'\2192'; position:absolute; left:0; color:var(--cobalt); opacity:0.5; }
+
+  /* CTA — golden */
+  .golden { background:var(--cobalt); padding:5rem 2.5rem; text-align:center; }
+  .golden p { font-size:clamp(1.3rem,2.5vw,1.8rem); color:var(--white); line-height:1.5; max-width:700px; margin:0 auto; font-weight:300; }
+  .golden strong { font-weight:600; }
+  .price-note { display:block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.55rem; letter-spacing:0.06em; color:var(--white); opacity:0.35; margin-top:1rem; }
+
+  /* FOUNDER */
+  .founder { background:var(--white); padding:5rem 2.5rem; border-top:1px solid rgba(0,85,255,0.08); }
+  .founder-inner { max-width:800px; }
+  .founder-quote { font-size:clamp(1.2rem,2.2vw,1.6rem); color:var(--cobalt); line-height:1.5; font-weight:500; font-style:italic; margin-bottom:2rem; border-left:4px solid var(--cobalt); padding-left:2rem; }
+  .founder-bio { font-size:0.85rem; color:var(--cobalt); opacity:0.55; line-height:1.7; }
+  .founder-bio strong { font-weight:600; opacity:1; }
+
+  /* FOOTER */
+  footer { background:var(--cobalt); padding:5rem 2.5rem 3rem; }
+  .footer-top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3rem; position:relative; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-logo-mark { width:50px; height:50px; border:2px solid var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .footer-col { display:flex; flex-direction:column; gap:0.5rem; }
+  .footer-col h4 { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.65rem; color:var(--white); opacity:0.4; margin-bottom:0.5rem; }
+  .footer-col a { font-size:0.82rem; color:var(--white); text-decoration:none; opacity:0.6; transition:opacity 0.3s; }
+  .footer-col a:hover { opacity:1; }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:2rem; }
+  .footer-bottom span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:0.6rem; color:var(--white); opacity:0.3; }
+
+  /* REVEAL */
+  .reveal,.reveal-left,.reveal-right { opacity:0; transform:translateY(30px); transition:opacity 0.7s,transform 0.7s; }
+  .reveal-left { transform:translateX(-30px); }
+  .reveal-right { transform:translateX(30px); }
+  .reveal.visible,.reveal-left.visible,.reveal-right.visible { opacity:1; transform:translate(0); }
+
+  /* RESPONSIVE */
+  @media(max-width:768px) {
+    .what-grid { grid-template-columns:1fr; }
+    .method-grid { grid-template-columns:1fr; }
+    .comparison { grid-template-columns:1fr; }
+    .footer-top { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-overlay"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/en/" class="nav-logo"><span>bridge.</span></a>
+  <div class="nav-links">
+    <a href="/en/#what">What We Do</a>
+    <a href="/en/#how">How It Works</a>
+    <a href="/en/#guides">Guides</a>
+    <a href="/en/#consultation">Contact</a>
+    <a href="https://ai-bridge.kit.com/products/social-media-ai-guide" class="nav-cta">Get the Social Media Guide</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-lines"></div>
+  <h1 class="hero-title">AI for your<br>restaurant&rsquo;s<br>social media<span class="dot">.</span></h1>
+  <div class="hero-subtitle-box">
+    You didn&rsquo;t open a restaurant to spend your evenings writing Instagram captions. AI can handle your social media content &mdash; all of it &mdash; while you focus on the floor, the kitchen, and the guests in front of you.
+  </div>
+  <div class="hero-cta-wrap">
+    <a href="https://ai-bridge.kit.com/products/social-media-ai-guide" class="hero-download">[ Get the Social Media AI Guide &rarr; ]</a>
+    <span class="hero-cta-sub">$9 &mdash; instant download</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span>AI Social Media</span><span>Restaurant Marketing</span><span>Content in Minutes</span><span>Save 5 Hours a Week</span><span>Copy-Paste Prompts</span><span>Built for Operators</span>
+    <span>AI Social Media</span><span>Restaurant Marketing</span><span>Content in Minutes</span><span>Save 5 Hours a Week</span><span>Copy-Paste Prompts</span><span>Built for Operators</span>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="problem">
+  <div class="section-label"><span>The Reality</span><span class="code">[SM.1]</span></div>
+  <h2 class="section-title reveal">Social media<br>without AI is<br>a time trap.</h2>
+  <p class="section-desc reveal">Here&rsquo;s what a typical week of restaurant social media looks like when you&rsquo;re doing everything manually.</p>
+  <ul class="time-list reveal">
+    <li><span>Thinking of what to post</span><span class="task-time">45 min</span></li>
+    <li><span>Writing captions, rewriting, second-guessing</span><span class="task-time">1.5 hrs</span></li>
+    <li><span>Taking and editing photos</span><span class="task-time">1 hr</span></li>
+    <li><span>Finding hashtags and trending audio</span><span class="task-time">30 min</span></li>
+    <li><span>Scheduling and posting across platforms</span><span class="task-time">30 min</span></li>
+    <li><span>Replying to comments and DMs</span><span class="task-time">45 min</span></li>
+  </ul>
+  <div class="time-total reveal"><span>Total per week</span><span class="task-time">5+ hours</span></div>
+  <p class="section-note reveal">Five hours a week on social media. That&rsquo;s an entire shift. Most restaurant owners either burn out trying to keep up &mdash; or post once, go silent for two weeks, and lose all momentum.</p>
+</section>
+
+<!-- WHAT AI DOES -->
+<section class="what-section">
+  <div class="section-label" style="color:var(--white);opacity:0.4;"><span>What Changes</span><span class="code">[SM.2]</span></div>
+  <h2 class="section-title reveal">What AI<br>actually does<br>for your socials.</h2>
+  <p class="section-desc reveal">AI handles the repetitive work &mdash; the thinking, writing, planning, and scheduling &mdash; so you can show up online without it eating your day.</p>
+  <div class="what-grid">
+    <div class="what-card" data-delay="0"><div class="card-num">01</div><h4>Writes your captions</h4><p>Give AI your restaurant&rsquo;s voice once. Then ask it to write a week of posts in two minutes. Edit what you want, post what works.</p></div>
+    <div class="what-card" data-delay="100"><div class="card-num">02</div><h4>Plans your content calendar</h4><p>Tell AI your concept, your specials, your events. It maps out a full month of content pillars and post ideas. No more blank screens.</p></div>
+    <div class="what-card" data-delay="200"><div class="card-num">03</div><h4>Generates hashtag strategies</h4><p>AI analyses what works in your niche and location. Relevant, targeted hashtags every time. No more guessing or copying competitors.</p></div>
+    <div class="what-card" data-delay="300"><div class="card-num">04</div><h4>Drafts replies and engagement</h4><p>Customer comments, review responses, DM templates. AI drafts them in your tone, you approve and send. Engagement without the energy drain.</p></div>
+    <div class="what-card" data-delay="400"><div class="card-num">05</div><h4>Repurposes across platforms</h4><p>One Instagram post becomes a Facebook update, a Google Business post, and a story caption. AI adapts the format and tone instantly.</p></div>
+    <div class="what-card" data-delay="500"><div class="card-num">06</div><h4>Builds a brand memory</h4><p>Set up AI with your restaurant&rsquo;s story, menu, style and voice once. Every piece of content stays on-brand without a brief every time.</p></div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="comparison">
+  <div class="comp-left">
+    <div class="section-label"><span>Without AI</span><span class="code">[SM.3]</span></div>
+    <h3 class="comp-title reveal-left">Monday morning.<br>The old way.</h3>
+    <ul class="comp-list reveal-left">
+      <li>Staring at your phone wondering what to post</li>
+      <li>Writing and deleting the same caption three times</li>
+      <li>Googling &ldquo;restaurant Instagram ideas&rdquo; at midnight</li>
+      <li>Feeling guilty about not posting for 10 days</li>
+      <li>Watching competitors post consistently</li>
+      <li>Considering hiring a social media manager you can&rsquo;t afford</li>
+    </ul>
+  </div>
+  <div class="comp-right">
+    <div class="section-label" style="color:var(--white);opacity:0.4;"><span>With AI</span><span class="code">[SM.3]</span></div>
+    <h3 class="comp-title reveal-right">Monday morning.<br>The new way.</h3>
+    <ul class="comp-list reveal-right">
+      <li>Open AI, paste one prompt, get 7 post ideas in seconds</li>
+      <li>Pick the best captions, tweak the ones that need your touch</li>
+      <li>Schedule the whole week in one 20-minute session</li>
+      <li>Walk away knowing your socials are covered until next week</li>
+      <li>Spend the rest of your time on guests, food, and your team</li>
+      <li>Save the cost of a social media manager &mdash; permanently</li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="method">
+  <div class="section-label"><span>The Method</span><span class="code">[SM.4]</span></div>
+  <h2 class="section-title reveal">Three steps.<br>Every Monday.<br>That&rsquo;s it.</h2>
+  <p class="section-desc reveal">This is the exact workflow from the guide. No tech skills needed. If you can copy and paste, you can do this.</p>
+  <div class="method-grid">
+    <div class="method-card" data-delay="0"><div class="step-num">Step 01</div><h3>Set up your restaurant&rsquo;s AI memory</h3><p>Tell AI everything about your restaurant once &mdash; your concept, menu, voice, audience. It remembers. Every prompt after this is faster because AI already knows who you are.</p></div>
+    <div class="method-card" data-delay="150"><div class="step-num">Step 02</div><h3>Copy-paste prompts to generate a week of content</h3><p>Open the guide, copy the prompt, paste it into AI. In seconds you have captions, hashtags, story ideas, and engagement posts for the entire week.</p></div>
+    <div class="method-card" data-delay="300"><div class="step-num">Step 03</div><h3>Schedule everything and walk away</h3><p>Use a free scheduling tool (the guide covers exactly which ones) to queue your week. Done. Your restaurant shows up online every day &mdash; and you spent less than 30 minutes.</p></div>
+  </div>
+</section>
+
+<!-- PROMPT PREVIEW -->
+<section class="prompt-section">
+  <div class="section-label" style="color:var(--white);opacity:0.4;"><span>A Taste</span><span class="code">[SM.5]</span></div>
+  <h2 class="section-title reveal">This is what<br>one prompt<br>looks like.</h2>
+  <p class="section-desc reveal">You don&rsquo;t need to learn prompt engineering. You just copy, paste, and let AI do the work.</p>
+  <div class="prompt-box reveal">
+    <span class="prompt-label">Example Prompt</span>
+    <p class="prompt-text">You are my restaurant&rsquo;s social media manager. My restaurant is [name], a [concept] in [city]. Our style is [casual/upscale/etc]. Our audience is [describe]. Write me 5 Instagram post captions for this week. Include: one about our [signature dish], one behind-the-scenes kitchen moment, one staff spotlight, one asking followers a question, and one promoting our [upcoming event/special]. Keep the tone [warm/playful/professional]. Add 10 relevant hashtags to each.</p>
+  </div>
+  <p class="section-note reveal">One prompt. Five posts. Two minutes. The guide includes dozens of these &mdash; covering every content type across every platform.</p>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="who">
+  <div class="section-label"><span>Is This For You?</span><span class="code">[SM.6]</span></div>
+  <h2 class="section-title reveal">Built for people<br>who run restaurants,<br>not marketing<br>departments.</h2>
+  <p class="section-desc reveal">This guide was made for operators. Not agencies. Not marketers. People who are already stretched thin and need something that just works.</p>
+  <ul class="who-list reveal">
+    <li>Restaurant owners doing their own social media (or avoiding it entirely)</li>
+    <li>Caf&eacute; and bar managers who know they should post but never find the time</li>
+    <li>F&amp;B managers in hotels who need consistent content without a dedicated team</li>
+    <li>Anyone who&rsquo;s tried social media, burned out, and given up</li>
+    <li>Operators who want to stop paying a social media manager and do it themselves &mdash; better</li>
+  </ul>
+  <p class="section-note reveal">Whether you run a restaurant, a caf&eacute;, a bar, or manage food and drink for a hotel &mdash; the approach is the same.</p>
+</section>
+
+<!-- CTA -->
+<section class="golden">
+  <div class="section-label" style="color:var(--white);opacity:0.4;justify-content:center;"><span>Ready?</span></div>
+  <p class="reveal"><strong>The Social Media AI Guide gives you everything: the setup, the prompts, the strategy, the scheduling tools, and a 30-day action plan.</strong><br><br>Built by a restaurant manager, for restaurant managers.</p>
+  <br>
+  <a href="https://ai-bridge.kit.com/products/social-media-ai-guide" class="hero-download" style="animation:none;opacity:1;">[ Get the Guide &rarr; ]</a>
+  <span class="price-note">$9 &mdash; instant download</span>
+</section>
+
+<!-- FREE GUIDE -->
+<section class="method" style="padding:4rem 2.5rem;">
+  <div class="section-label"><span>Not ready yet?</span><span class="code">[SM.7]</span></div>
+  <p class="section-desc reveal" style="margin-bottom:1.5rem;">Start with our free Starter Guide &mdash; it covers the fundamentals of using AI in your restaurant, not just social media. No email required. Just read it.</p>
+  <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="hero-download reveal" style="animation:none;opacity:1;color:var(--cobalt);background:var(--white);">[ Read the Starter Guide &rarr; ]</a>
+  <br><br>
+  <a href="/en/" class="cta-bracket reveal" style="animation:none;font-size:0.7rem;color:var(--cobalt);opacity:0.45;">or explore bridge. &rarr;</a>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="founder-inner reveal">
+    <p class="founder-quote">I spent 14 years managing restaurants before AI existed. If I had had these tools, my life would have been unrecognisably easier. That is why I built bridge.</p>
+    <p class="founder-bio"><strong>14 years as a restaurant manager.</strong> Founder of <strong>All You Can Reserve</strong> (table booking) and <strong>Olivia</strong> (POS and self-order). Now connecting the industry with the AI tools that can genuinely transform how they work.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="/en/">Home</a><a href="/en/#what">What We Do</a><a href="/en/#guides">Guides</a><a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf">Starter Guide</a><a href="/en/#consultation">Contact</a></div>
+    <div class="footer-col"><h4>Connect</h4><a href="mailto:hello@ai-bridge.restaurant">hello@ai-bridge.restaurant</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 bridge. &mdash; For the people who feed the world.</span>
+    <span></span>
+  </div>
+</footer>
+
+<script>
+  const staggerObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay) || 0;
+        setTimeout(() => { entry.target.classList.add('visible'); }, delay);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.what-card, .method-card').forEach(el => staggerObs.observe(el));
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth' }); });
+  });
+</script>
+</body>
+</html>
