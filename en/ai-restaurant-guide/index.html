@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Starter Guide for Restaurants | bridge.</title>
+<meta name="description" content="A free, practical guide to using AI in your restaurant. No signup required. Learn how AI can handle daily tasks in minutes and give you back hours every week.">
+<link rel="canonical" href="https://ai-bridge.restaurant/en/ai-restaurant-guide/" />
+<link rel="alternate" hreflang="en" href="https://ai-bridge.restaurant/en/ai-restaurant-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://ai-bridge.restaurant/en/ai-restaurant-guide/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Free AI Starter Guide for Restaurants | bridge." />
+<meta property="og:description" content="A free, practical guide to using AI in your restaurant. No signup required. Learn how AI can handle daily tasks in minutes." />
+<meta property="og:url" content="https://ai-bridge.restaurant/en/ai-restaurant-guide/" />
+<meta property="og:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="bridge." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free AI Starter Guide for Restaurants | bridge." />
+<meta name="twitter:description" content="A free, practical guide to using AI in your restaurant. No signup required. Learn how AI can handle daily tasks in minutes." />
+<meta name="twitter:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="bridge." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Free AI Starter Guide for Restaurants",
+  "description": "A free, practical guide to using AI in your restaurant. No signup required. Learn how AI can handle daily tasks in minutes and give you back hours every week.",
+  "author": { "@type": "Person", "name": "Franky", "jobTitle": "Founder" },
+  "publisher": { "@type": "Organization", "name": "bridge.", "url": "https://ai-bridge.restaurant" },
+  "mainEntityOfPage": "https://ai-bridge.restaurant/en/ai-restaurant-guide/",
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-05"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #E8E6E0;
+    --cobalt: #0055FF;
+    --cobalt-dark: #003BB5;
+    --white: #FAFAF8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:var(--cream); color:var(--cobalt); overflow-x:hidden; }
+
+  /* GRID */
+  .grid-overlay { position:fixed; top:0; left:0; right:0; bottom:0; pointer-events:none; z-index:1; display:flex; justify-content:space-between; padding:0 2rem; }
+  .grid-overlay .line { width:1px; height:100%; background:var(--cobalt); opacity:0.06; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.25rem 2.5rem; background:var(--cobalt); }
+  .nav-logo { display:flex; align-items:center; gap:0.75rem; color:var(--white); text-decoration:none; }
+  .nav-logo > span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:0.8rem; font-weight:500; }
+  .nav-links { display:flex; gap:2.5rem; align-items:center; }
+  .nav-links a { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--white); text-decoration:none; opacity:0.8; transition:opacity 0.3s; }
+  .nav-links a:hover { opacity:1; }
+  .nav-cta { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--cobalt) !important; background:var(--white); border:none; padding:0.65rem 1.2rem; cursor:pointer; text-decoration:none; transition:all 0.3s; font-weight:600; opacity:1 !important; display:inline-block; }
+  .nav-cta:hover { background:var(--cream); }
+
+  /* SECTION HELPERS */
+  .section-label { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.7rem; color:var(--cobalt); opacity:0.5; margin-bottom:2rem; display:flex; justify-content:space-between; }
+  .section-label .code { opacity:0.4; }
+  .section-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--cobalt); line-height:0.95; letter-spacing:-0.03em; margin-bottom:1rem; }
+  .section-desc { font-size:1rem; color:var(--cobalt); opacity:0.55; max-width:550px; line-height:1.6; margin-bottom:3rem; }
+  .section-note { font-size:0.9rem; color:var(--cobalt); opacity:0.45; max-width:550px; line-height:1.6; margin-top:2rem; }
+  .hero-download { display:inline-block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.75rem; color:var(--cobalt); background:var(--white); padding:0.5rem 2rem; text-decoration:none; transition:all 0.3s; }
+  .hero-download:hover { background:var(--cream); }
+  .cta-bracket { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem; color:inherit; text-decoration:none; opacity:0.7; transition:opacity 0.3s; display:inline-block; }
+  .cta-bracket:hover { opacity:1; }
+
+  /* HERO */
+  .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:2.5rem; padding-top:80px; background:var(--cobalt); overflow:hidden; }
+  .hero-lines { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; }
+  .hero-lines::before { content:''; position:absolute; top:-50%; left:5%; width:90%; height:200%; background:repeating-linear-gradient(-30deg,transparent,transparent 18px,rgba(255,255,255,0.03) 18px,rgba(255,255,255,0.03) 20px); }
+  .hero-title { font-size:clamp(3.5rem,9vw,7rem); font-weight:800; color:var(--white); line-height:0.92; letter-spacing:-0.04em; margin-bottom:2rem; animation:fadeInUp 1s 0.3s both; }
+  .hero-title .dot { color:rgba(255,255,255,0.35); }
+  .hero-subtitle-box { max-width:550px; color:var(--white); opacity:0.85; font-size:1.05rem; line-height:1.6; font-weight:300; margin-bottom:3rem; animation:fadeInUp 1s 0.6s both; }
+  .hero-subtitle-box::before { content:''; display:block; width:1px; height:50px; background:var(--white); opacity:0.4; margin-bottom:1.5rem; }
+  .hero-cta-wrap { animation:fadeInUp 1s 0.9s both; }
+  .hero-cta-sub { display:block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.5rem; letter-spacing:0.06em; color:var(--white); opacity:0.4; margin-top:0.8rem; }
+  @keyframes fadeInUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+
+  /* MARQUEE */
+  .marquee-section { background:var(--cream); border-top:1px solid rgba(0,85,255,0.08); border-bottom:1px solid rgba(0,85,255,0.08); padding:1.8rem 0; overflow:hidden; }
+  .marquee-track { display:flex; gap:4rem; animation:marquee 25s linear infinite; width:max-content; }
+  .marquee-track span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.15em; font-size:0.7rem; color:var(--cobalt); opacity:0.35; white-space:nowrap; display:flex; align-items:center; gap:4rem; }
+  .marquee-track span::after { content:'\25C6'; font-size:0.4rem; opacity:0.5; }
+  @keyframes marquee { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+
+  /* WHAT'S INSIDE — services grid style */
+  .inside { background:var(--cream); padding:6rem 2.5rem; }
+  .inside-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; max-width:1100px; background:rgba(0,85,255,0.1); }
+  .inside-card { background:var(--cream); padding:2.5rem 2rem; transition:background 0.3s; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s,background 0.3s; }
+  .inside-card.visible { opacity:1; transform:translateY(0); }
+  .inside-card:hover { background:var(--white); }
+  .inside-card .card-icon { font-size:1.8rem; margin-bottom:1rem; }
+  .inside-card h3 { font-size:1.15rem; font-weight:600; color:var(--cobalt); margin-bottom:0.6rem; line-height:1.3; }
+  .inside-card p { font-size:0.8rem; color:var(--cobalt); opacity:0.5; line-height:1.6; }
+
+  /* WHY AI — split layout */
+  .why-ai { display:grid; grid-template-columns:1fr 1fr; min-height:70vh; }
+  .why-left { background:var(--cream); padding:6rem 2.5rem; display:flex; flex-direction:column; justify-content:center; position:relative; }
+  .why-left::after { content:''; position:absolute; right:0; top:0; width:1px; height:100%; background:var(--cobalt); opacity:0.1; }
+  .why-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--cobalt); line-height:0.95; letter-spacing:-0.03em; margin-bottom:2rem; }
+  .why-desc { font-size:1rem; line-height:1.8; color:var(--cobalt); opacity:0.6; max-width:440px; margin-bottom:2.5rem; }
+  .why-right { background:var(--cobalt); padding:6rem 3rem; display:flex; flex-direction:column; justify-content:center; gap:2rem; }
+  .why-stat { border-top:1px solid rgba(255,255,255,0.12); padding-top:1.5rem; }
+  .why-stat .stat-number { font-size:3rem; font-weight:800; color:var(--white); letter-spacing:-0.02em; margin-bottom:0.5rem; }
+  .why-stat .stat-label { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--white); opacity:0.55; line-height:1.7; }
+
+  /* TASKS — cobalt, step-card style */
+  .tasks-section { background:var(--cobalt); padding:6rem 2.5rem; }
+  .tasks-section .section-title { color:var(--white); }
+  .tasks-section .section-desc { color:var(--white); }
+  .tasks-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; }
+  .task-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2.5rem 2rem; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s; }
+  .task-card.visible { opacity:1; transform:translateY(0); }
+  .task-card .card-num { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.35; margin-bottom:1rem; }
+  .task-card h4 { font-size:1.3rem; font-weight:600; color:var(--white); margin-bottom:1rem; }
+  .task-card p { font-size:0.82rem; color:var(--white); opacity:0.5; line-height:1.6; }
+
+  /* WHO — cream */
+  .who { background:var(--cream); padding:6rem 2.5rem; }
+  .who-list { list-style:none; max-width:600px; }
+  .who-list li { font-size:0.95rem; line-height:1.6; color:var(--cobalt); opacity:0.6; padding:0.8rem 0 0.8rem 1.5rem; position:relative; border-bottom:1px solid rgba(0,85,255,0.08); }
+  .who-list li::before { content:'\2192'; position:absolute; left:0; color:var(--cobalt); opacity:0.5; }
+
+  /* NO CATCH — white bg */
+  .no-catch { background:var(--white); padding:5rem 2.5rem; border-top:1px solid rgba(0,85,255,0.08); border-bottom:1px solid rgba(0,85,255,0.08); }
+  .no-catch-inner { max-width:600px; }
+  .no-catch .section-title { font-size:clamp(1.8rem,4vw,2.8rem); }
+  .no-catch-list { list-style:none; margin-top:2rem; }
+  .no-catch-list li { font-size:0.95rem; line-height:1.6; color:var(--cobalt); opacity:0.6; padding:0.7rem 0; padding-left:1.5rem; position:relative; border-bottom:1px solid rgba(0,85,255,0.04); }
+  .no-catch-list li::before { content:'\2713'; position:absolute; left:0; color:var(--cobalt); opacity:0.4; font-weight:700; }
+
+  /* CTA — golden */
+  .golden { background:var(--cobalt); padding:5rem 2.5rem; text-align:center; }
+  .golden p { font-size:clamp(1.3rem,2.5vw,1.8rem); color:var(--white); line-height:1.5; max-width:700px; margin:0 auto; font-weight:300; }
+  .golden strong { font-weight:600; }
+  .price-note { display:block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.55rem; letter-spacing:0.06em; color:var(--white); opacity:0.35; margin-top:1rem; }
+
+  /* NEXT STEPS — cream */
+  .next-steps { background:var(--cream); padding:5rem 2.5rem; }
+  .next-steps .section-desc { margin-bottom:1.5rem; }
+
+  /* FOUNDER */
+  .founder { background:var(--white); padding:5rem 2.5rem; border-top:1px solid rgba(0,85,255,0.08); }
+  .founder-inner { max-width:800px; }
+  .founder-quote { font-size:clamp(1.2rem,2.2vw,1.6rem); color:var(--cobalt); line-height:1.5; font-weight:500; font-style:italic; margin-bottom:2rem; border-left:4px solid var(--cobalt); padding-left:2rem; }
+  .founder-bio { font-size:0.85rem; color:var(--cobalt); opacity:0.55; line-height:1.7; }
+  .founder-bio strong { font-weight:600; opacity:1; }
+
+  /* FOOTER */
+  footer { background:var(--cobalt); padding:5rem 2.5rem 3rem; }
+  .footer-top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3rem; position:relative; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-col { display:flex; flex-direction:column; gap:0.5rem; }
+  .footer-col h4 { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.65rem; color:var(--white); opacity:0.4; margin-bottom:0.5rem; }
+  .footer-col a { font-size:0.82rem; color:var(--white); text-decoration:none; opacity:0.6; transition:opacity 0.3s; }
+  .footer-col a:hover { opacity:1; }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:2rem; }
+  .footer-bottom span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:0.6rem; color:var(--white); opacity:0.3; }
+
+  /* REVEAL */
+  .reveal,.reveal-left,.reveal-right { opacity:0; transform:translateY(30px); transition:opacity 0.7s,transform 0.7s; }
+  .reveal-left { transform:translateX(-30px); }
+  .reveal-right { transform:translateX(30px); }
+  .reveal.visible,.reveal-left.visible,.reveal-right.visible { opacity:1; transform:translate(0); }
+
+  /* RESPONSIVE */
+  @media(max-width:768px) {
+    .inside-grid { grid-template-columns:1fr; }
+    .tasks-grid { grid-template-columns:1fr; }
+    .why-ai { grid-template-columns:1fr; }
+    .footer-top { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .hero-download { width:100%; text-align:center; padding:0.7rem 1.5rem; font-size:0.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-overlay"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/en/" class="nav-logo"><span>bridge.</span></a>
+  <div class="nav-links">
+    <a href="/en/#what">What We Do</a>
+    <a href="/en/#how">How It Works</a>
+    <a href="/en/#guides">Guides</a>
+    <a href="/en/#consultation">Contact</a>
+    <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="nav-cta">Read the Starter Guide</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-lines"></div>
+  <h1 class="hero-title">The AI<br>starter guide<br>for restaurants<span class="dot">.</span></h1>
+  <div class="hero-subtitle-box">
+    A practical, honest introduction to using AI in your restaurant. What it can do, what it can&rsquo;t, and how to start using it today to take real work off your plate. No signup. No email required. Just read it.
+  </div>
+  <div class="hero-cta-wrap">
+    <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="hero-download">[ Read the Starter Guide &rarr; ]</a>
+    <span class="hero-cta-sub">Free &mdash; no email required</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span>Free Guide</span><span>No Signup</span><span>Built for Operators</span><span>Practical AI</span><span>Real Examples</span><span>14 Years Experience</span>
+    <span>Free Guide</span><span>No Signup</span><span>Built for Operators</span><span>Practical AI</span><span>Real Examples</span><span>14 Years Experience</span>
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside">
+  <div class="section-label"><span>What&rsquo;s Inside</span><span class="code">[SG.1]</span></div>
+  <h2 class="section-title reveal">Everything you need<br>to get started<br>with AI.</h2>
+  <p class="section-desc reveal">No fluff, no filler. The guide covers exactly what a restaurant operator needs to know to start using AI today &mdash; and nothing more.</p>
+
+  <div class="inside-grid">
+    <div class="inside-card" data-delay="0"><div class="card-icon">&rarr;</div><h3>What AI actually is (in plain English)</h3><p>No jargon. No hype. A clear explanation of what AI is, what it can realistically do for your restaurant, and where the limits are.</p></div>
+    <div class="inside-card" data-delay="100"><div class="card-icon">&rarr;</div><h3>The daily tasks AI can handle</h3><p>From writing social media posts and replying to reviews to drafting staff emails and creating menu descriptions &mdash; real tasks, real examples.</p></div>
+    <div class="inside-card" data-delay="200"><div class="card-icon">&rarr;</div><h3>How to set up AI for your restaurant</h3><p>Step-by-step setup instructions. Which tools to use, how to give AI the right context about your restaurant, and how to get useful results from day one.</p></div>
+    <div class="inside-card" data-delay="300"><div class="card-icon">&rarr;</div><h3>Copy-paste prompts you can use today</h3><p>Ready-made prompts for the most common restaurant tasks. Copy them, paste them into ChatGPT or Claude, and watch AI do the work.</p></div>
+    <div class="inside-card" data-delay="400"><div class="card-icon">&rarr;</div><h3>What AI can&rsquo;t do (yet)</h3><p>Honest about the limitations. AI won&rsquo;t replace your team, your taste, or your hospitality &mdash; and this guide is upfront about that.</p></div>
+    <div class="inside-card" data-delay="500"><div class="card-icon">&rarr;</div><h3>Where to go next</h3><p>Once you&rsquo;ve got the basics, the guide points you to deeper resources on specific topics like social media, food costs, and marketing.</p></div>
+  </div>
+</section>
+
+<!-- WHY AI — split layout -->
+<section class="why-ai">
+  <div class="why-left">
+    <div class="section-label"><span>Why This Matters</span><span class="code">[SG.2]</span></div>
+    <h2 class="why-title reveal-left">Restaurants are<br>AI-proof. You<br>are not<br>replaceable.</h2>
+    <p class="why-desc reveal-left">AI isn&rsquo;t coming for your job. Nobody wants a robot to cook their dinner or greet them at the door. But the admin, the marketing, the repetitive paperwork that eats your evenings? That&rsquo;s exactly what AI is built for.</p>
+    <p class="why-desc reveal-left">The operators who learn to use AI now will have a genuine advantage &mdash; more time, less stress, better decisions. This guide is the starting point.</p>
+  </div>
+  <div class="why-right">
+    <div class="why-stat reveal-right"><div class="stat-number">10+</div><div class="stat-label">Hours per week saved on tasks AI can handle in minutes</div></div>
+    <div class="why-stat reveal-right"><div class="stat-number">80%</div><div class="stat-label">Of restaurant admin tasks can be assisted or automated by AI</div></div>
+    <div class="why-stat reveal-right"><div class="stat-number">0</div><div class="stat-label">Technical skills required to start &mdash; if you can copy and paste, you can use AI</div></div>
+  </div>
+</section>
+
+<!-- TASKS AI CAN HANDLE -->
+<section class="tasks-section">
+  <div class="section-label" style="color:var(--white);opacity:0.4;"><span>Real Examples</span><span class="code">[SG.3]</span></div>
+  <h2 class="section-title reveal">Tasks you can hand<br>to AI today.</h2>
+  <p class="section-desc reveal">These aren&rsquo;t future predictions. These are things AI can do for your restaurant right now, in minutes, for free.</p>
+
+  <div class="tasks-grid">
+    <div class="task-card" data-delay="0"><div class="card-num">01</div><h4>Social media posts</h4><p>Generate a full week of Instagram captions, hashtags, and story ideas in under two minutes. Edit, schedule, done.</p></div>
+    <div class="task-card" data-delay="100"><div class="card-num">02</div><h4>Review responses</h4><p>Draft thoughtful, on-brand replies to Google and TripAdvisor reviews &mdash; both positive and negative &mdash; in seconds.</p></div>
+    <div class="task-card" data-delay="200"><div class="card-num">03</div><h4>Menu descriptions</h4><p>Turn a list of ingredients into compelling, appetite-driving menu copy. Multiple styles, multiple languages, instantly.</p></div>
+    <div class="task-card" data-delay="300"><div class="card-num">04</div><h4>Staff communications</h4><p>Write team memos, training materials, shift briefings, and onboarding documents. Clear, professional, consistent.</p></div>
+    <div class="task-card" data-delay="400"><div class="card-num">05</div><h4>Email marketing</h4><p>Draft newsletter content, event invitations, and customer emails that sound like you &mdash; not a template.</p></div>
+    <div class="task-card" data-delay="500"><div class="card-num">06</div><h4>Job adverts</h4><p>Create compelling job postings for every position. AI knows what candidates look for and how to stand out.</p></div>
+  </div>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="who">
+  <div class="section-label"><span>Who It&rsquo;s For</span><span class="code">[SG.4]</span></div>
+  <h2 class="section-title reveal">Written for<br>restaurant people.<br>Not tech people.</h2>
+  <p class="section-desc reveal">You don&rsquo;t need to know anything about AI to read this guide. If you run a restaurant, a caf&eacute;, a bar, or manage food and drink for a hotel &mdash; this was written for you.</p>
+
+  <ul class="who-list reveal">
+    <li>Restaurant owners and managers who have heard about AI but haven&rsquo;t started</li>
+    <li>Operators who tried ChatGPT once, got a generic answer, and gave up</li>
+    <li>Caf&eacute; and bar owners who want to save time but don&rsquo;t know where to begin</li>
+    <li>F&amp;B managers in hotels looking for practical, not theoretical, AI guidance</li>
+    <li>Anyone curious about AI but put off by the hype and jargon</li>
+  </ul>
+</section>
+
+<!-- NO CATCH -->
+<section class="no-catch">
+  <div class="no-catch-inner">
+    <div class="section-label"><span>Honestly</span><span class="code">[SG.5]</span></div>
+    <h2 class="section-title reveal">No email. No signup.<br>No catch.</h2>
+    <p class="section-desc reveal">Most websites make you hand over your email before you can read anything. We don&rsquo;t. The guide is completely free, right now, no strings attached.</p>
+    <ul class="no-catch-list reveal">
+      <li>No email gate &mdash; just click and read</li>
+      <li>No upsell popups while you&rsquo;re reading</li>
+      <li>No 7-day trial that auto-charges you</li>
+      <li>No &ldquo;book a demo&rdquo; before you can access it</li>
+      <li>Just a genuinely useful guide, written by someone who gets your job</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="golden">
+  <div class="section-label" style="color:var(--white);opacity:0.4;justify-content:center;"><span>Ready?</span></div>
+  <p class="reveal"><strong>Start using AI in your restaurant today.</strong><br><br>The Starter Guide is free, practical, and written by a restaurant manager with 14 years in the industry. No signup required. Just read it.</p>
+  <br>
+  <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="hero-download" style="animation:none;opacity:1;">[ Read the Starter Guide &rarr; ]</a>
+  <span class="price-note">Free &mdash; no email required</span>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="next-steps">
+  <div class="section-label"><span>Go Deeper</span><span class="code">[SG.6]</span></div>
+  <h2 class="section-title reveal">Ready for more?</h2>
+  <p class="section-desc reveal">Once you&rsquo;ve read the starter guide, take the next step with our focused guides on specific topics.</p>
+  <a href="https://ai-bridge.kit.com/products/social-media-ai-guide" class="hero-download reveal" style="animation:none;opacity:1;color:var(--cobalt);background:var(--white);">[ Social Media AI Guide &mdash; $9 &rarr; ]</a>
+  <br><br>
+  <a href="/en/" class="cta-bracket reveal" style="animation:none;font-size:0.7rem;color:var(--cobalt);opacity:0.45;">or explore bridge. &rarr;</a>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="founder-inner reveal">
+    <p class="founder-quote">I spent 14 years managing restaurants before AI existed. If I had had these tools, my life would have been unrecognisably easier. That is why I built bridge.</p>
+    <p class="founder-bio"><strong>14 years as a restaurant manager.</strong> Founder of <strong>All You Can Reserve</strong> (table booking) and <strong>Olivia</strong> (POS and self-order). Now connecting the industry with the AI tools that can genuinely transform how they work.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="/en/">Home</a><a href="/en/#what">What We Do</a><a href="/en/#guides">Guides</a><a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf">Starter Guide</a><a href="/en/#consultation">Contact</a></div>
+    <div class="footer-col"><h4>Connect</h4><a href="mailto:hello@ai-bridge.restaurant">hello@ai-bridge.restaurant</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 bridge. &mdash; For the people who feed the world.</span>
+    <span><a href="/en/imprint/" style="color:var(--white);opacity:0.8;text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;font-size:0.6rem;margin-right:1.5rem;">Imprint</a><a href="/en/privacy/" style="color:var(--white);opacity:0.8;text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;font-size:0.6rem;">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  const staggerObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay) || 0;
+        setTimeout(() => { entry.target.classList.add('visible'); }, delay);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.inside-card, .task-card').forEach(el => staggerObs.observe(el));
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth' }); });
+  });
+</script>
+</body>
+</html>
