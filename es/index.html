@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bridge. | Conectamos tu restaurante con las posibilidades infinitas de la IA</title>
+<meta name="description" content="bridge. te muestra cómo usar la IA para reducir tu carga de trabajo diaria y aumentar la rentabilidad. Guías prácticas, ejemplos reales, construido con 14 años de experiencia en hostelería.">
+<link rel="canonical" href="https://ai-bridge.restaurant/es/" />
+
+<!-- ─── HREFLANG TAGS ─── -->
+<link rel="alternate" hreflang="en" href="https://ai-bridge.restaurant/en/" />
+<link rel="alternate" hreflang="de" href="https://ai-bridge.restaurant/de/" />
+<link rel="alternate" hreflang="es" href="https://ai-bridge.restaurant/es/" />
+<link rel="alternate" hreflang="fr" href="https://ai-bridge.restaurant/fr/" />
+<link rel="alternate" hreflang="x-default" href="https://ai-bridge.restaurant/en/" />
+
+<!-- ─── OPEN GRAPH ─── -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="bridge. — Conectamos tu restaurante con las posibilidades infinitas de la IA" />
+<meta property="og:description" content="Guías prácticas de IA y consultoría para restaurantes, cafeterías y bares. Construido con 14 años de experiencia en hostelería." />
+<meta property="og:url" content="https://ai-bridge.restaurant/es/" />
+<meta property="og:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="bridge." />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<!-- ─── TWITTER / X CARD ─── -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="bridge. — Conectamos tu restaurante con las posibilidades infinitas de la IA" />
+<meta name="twitter:description" content="Guías prácticas de IA y consultoría para restaurantes, cafeterías y bares. Construido con 14 años de experiencia en hostelería." />
+<meta name="twitter:image" content="https://ai-bridge.restaurant/en/images/og-image.jpg" />
+
+<!-- ─── ADDITIONAL SEO META ─── -->
+<meta name="robots" content="index, follow" />
+<meta name="author" content="bridge." />
+
+<!-- ─── SCHEMA MARKUP ─── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ai-bridge.restaurant/#website",
+      "url": "https://ai-bridge.restaurant/es/",
+      "name": "bridge.",
+      "description": "Conectamos tu restaurante con las posibilidades infinitas de la IA",
+      "inLanguage": ["es", "en", "de", "fr"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ai-bridge.restaurant/#organization",
+      "name": "bridge.",
+      "url": "https://ai-bridge.restaurant/es/",
+      "description": "Guías prácticas de IA y consultoría para restaurantes, cafeterías y bares. Construido con 14 años de experiencia en hostelería.",
+      "founder": {
+        "@type": "Person",
+        "name": "Franky",
+        "jobTitle": "Fundador",
+        "description": "23 años en hostelería, 14 como director de restaurante. Fundador de All You Can Reserve y Olivia."
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ai-bridge.restaurant/es/#webpage",
+      "url": "https://ai-bridge.restaurant/es/",
+      "name": "bridge. — Conectamos tu restaurante con las posibilidades infinitas de la IA",
+      "description": "bridge. te muestra cómo usar la IA para reducir tu carga de trabajo diaria y aumentar la rentabilidad.",
+      "isPartOf": { "@id": "https://ai-bridge.restaurant/#website" },
+      "about": { "@id": "https://ai-bridge.restaurant/#organization" },
+      "inLanguage": "es"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #E8E6E0;
+    --cobalt: #0055FF;
+    --cobalt-dark: #003BB5;
+    --white: #FAFAF8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:var(--cream); color:var(--cobalt); overflow-x:hidden; }
+  .mono { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; }
+  .grid-overlay { position:fixed; top:0; left:0; right:0; bottom:0; pointer-events:none; z-index:1; display:flex; justify-content:space-between; padding:0 2rem; }
+  .grid-overlay .line { width:1px; height:100%; background:var(--cobalt); opacity:0.06; }
+  .pixel-img { position:relative; overflow:hidden; background:var(--cobalt); }
+  .pixel-img img { width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.4) brightness(1.15); }
+  .pixel-img::after { content:''; position:absolute; inset:0; background:var(--cobalt); mix-blend-mode:color; z-index:1; pointer-events:none; }
+  .pixel-img::before { content:''; position:absolute; inset:0; z-index:2; pointer-events:none; background-image:radial-gradient(circle,var(--cobalt) 1.2px,transparent 1.2px); background-size:4px 4px; opacity:0.35; mix-blend-mode:multiply; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.25rem 2.5rem; background:var(--cobalt); }
+  .nav-logo { display:flex; align-items:center; gap:0.75rem; color:var(--white); text-decoration:none; }
+  .logo-mark { width:36px; height:36px; border:2px solid var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.65rem; }
+  .nav-logo > span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:0.8rem; font-weight:500; }
+  .nav-links { display:flex; gap:2.5rem; align-items:center; }
+  .nav-links a { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--white); text-decoration:none; opacity:0.8; transition:opacity 0.3s; }
+  .nav-links a:hover { opacity:1; }
+  .nav-cta { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--cobalt) !important; background:var(--white); border:none; padding:0.65rem 1.2rem; cursor:pointer; text-decoration:none; transition:all 0.3s; font-weight:600; opacity:1 !important; display:inline-block; }
+  .nav-cta:hover { background:var(--cream); }
+  .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:2.5rem; padding-top:80px; background:var(--cobalt); overflow:hidden; }
+  .hero-lines { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; }
+  .hero-lines::before { content:''; position:absolute; top:-50%; left:5%; width:90%; height:200%; background:repeating-linear-gradient(-30deg,transparent,transparent 18px,rgba(255,255,255,0.03) 18px,rgba(255,255,255,0.03) 20px); }
+  .hero-subtitle-box { max-width:550px; color:var(--white); opacity:0.85; font-size:1.05rem; line-height:1.6; font-weight:300; margin-bottom:3rem; animation:fadeInUp 1s 0.6s both; }
+  .hero-subtitle-box::before { content:''; display:block; width:1px; height:50px; background:var(--white); opacity:0.4; margin-bottom:1.5rem; }
+  .hero-title { font-size:clamp(5rem,12vw,10rem); font-weight:800; color:var(--white); line-height:0.88; letter-spacing:-0.04em; margin-bottom:5rem; animation:fadeInUp 1s 0.3s both; }
+  .hero-title .dot { color:rgba(255,255,255,0.35); }
+  .hero-download { display:inline-block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.75rem; color:var(--cobalt); background:var(--white); padding:0.5rem 2rem; text-decoration:none; transition:all 0.3s; animation:fadeInUp 1s 1.2s both; }
+  .hero-download:hover { background:var(--cream); }
+  .hero-download-sub { display:block; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.5rem; letter-spacing:0.06em; color:var(--white); opacity:0.4; margin-top:0.8rem; animation:fadeInUp 1s 1.4s both; }
+  @keyframes fadeInUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+  .section-label { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.7rem; color:var(--cobalt); opacity:0.5; margin-bottom:2rem; display:flex; justify-content:space-between; }
+  .section-label .code { opacity:0.4; }
+  .cta-bracket { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem; color:inherit; text-decoration:none; opacity:0.7; transition:opacity 0.3s; }
+  .cta-bracket:hover { opacity:1; }
+  .services { background:var(--cream); padding:6rem 2.5rem; }
+  .services .section-title { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:800; color:var(--cobalt); line-height:0.95; letter-spacing:-0.03em; margin-bottom:1rem; }
+  .services .section-desc { font-size:1rem; color:var(--cobalt); opacity:0.55; max-width:550px; line-height:1.6; margin-bottom:4rem; }
+  .services-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; max-width:1100px; background:rgba(0,85,255,0.1); }
+  .service-card { background:var(--cream); padding:2.5rem 2rem; transition:background 0.3s; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s,background 0.3s; }
+  .service-card.visible { opacity:1; transform:translateY(0); }
+  .service-card:hover { background:var(--white); }
+  .service-card h3 { font-size:1.15rem; font-weight:600; color:var(--cobalt); margin-bottom:0.6rem; line-height:1.3; }
+  .service-card p { font-size:0.8rem; color:var(--cobalt); opacity:0.5; line-height:1.6; }
+  .marquee-section { background:var(--cream); border-top:1px solid rgba(0,85,255,0.08); border-bottom:1px solid rgba(0,85,255,0.08); padding:1.8rem 0; overflow:hidden; }
+  .marquee-track { display:flex; gap:4rem; animation:marquee 25s linear infinite; width:max-content; }
+  .marquee-track span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.15em; font-size:0.7rem; color:var(--cobalt); opacity:0.35; white-space:nowrap; display:flex; align-items:center; gap:4rem; }
+  .marquee-track span::after { content:'\25C6'; font-size:0.4rem; opacity:0.5; }
+  @keyframes marquee { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+  .steps-section { background:var(--cobalt); padding:6rem 2.5rem; }
+  .steps-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--white); line-height:0.95; letter-spacing:-0.03em; margin-bottom:1rem; }
+  .steps-desc { font-size:1rem; color:var(--white); opacity:0.55; max-width:400px; line-height:1.6; margin-bottom:4rem; }
+  .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; }
+  .step-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2.5rem 2rem; opacity:0; transform:translateY(30px); transition:opacity 0.6s,transform 0.6s; }
+  .step-card.visible { opacity:1; transform:translateY(0); }
+  .step-card .step-num { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); opacity:0.35; margin-bottom:1rem; }
+  .step-card h4 { font-size:1.3rem; font-weight:600; color:var(--white); margin-bottom:1rem; }
+  .step-card p { font-size:0.82rem; color:var(--white); opacity:0.5; line-height:1.6; }
+  .image-band { display:grid; grid-template-columns:repeat(4,1fr); height:350px; overflow:hidden; }
+  .image-band .pixel-img { height:100%; }
+  .why { display:grid; grid-template-columns:1fr 1fr; min-height:70vh; }
+  .why-left { background:var(--cream); padding:6rem 2.5rem; display:flex; flex-direction:column; justify-content:center; position:relative; }
+  .why-left::after { content:''; position:absolute; right:0; top:0; width:1px; height:100%; background:var(--cobalt); opacity:0.1; }
+  .why-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--cobalt); line-height:0.95; letter-spacing:-0.03em; margin-bottom:2rem; }
+  .why-desc { font-size:1rem; line-height:1.8; color:var(--cobalt); opacity:0.6; max-width:440px; margin-bottom:2.5rem; }
+  .why-right { background:var(--cobalt); padding:6rem 3rem; display:flex; flex-direction:column; justify-content:center; gap:2rem; }
+  .why-stat { border-top:1px solid rgba(255,255,255,0.12); padding-top:1.5rem; }
+  .why-stat .stat-number { font-size:3rem; font-weight:800; color:var(--white); letter-spacing:-0.02em; margin-bottom:0.5rem; }
+  .why-stat .stat-label { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; color:var(--white); opacity:0.55; line-height:1.7; }
+  .guides { padding:6rem 2.5rem; background:var(--cream); text-align:center; }
+  .guides-title { font-size:clamp(3rem,7vw,5.5rem); font-weight:800; color:var(--cobalt); line-height:0.92; letter-spacing:-0.03em; opacity:0.1; margin-bottom:1rem; }
+  .guides-sub { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.75rem; color:var(--cobalt); opacity:0.45; margin-bottom:4rem; }
+  .guides-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; max-width:900px; margin:0 auto; background:rgba(0,85,255,0.1); }
+  .guide-card { background:var(--cream); padding:2.5rem 2rem; text-align:left; transition:background 0.3s; cursor:pointer; }
+  .guide-card:hover { background:var(--white); }
+  .guide-status { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.6rem; color:var(--cobalt); opacity:0.4; margin-bottom:1.2rem; display:block; }
+  .guide-status.live { color:#1a8a4a; opacity:0.8; }
+  .guide-card h3 { font-size:1.2rem; font-weight:600; color:var(--cobalt); margin-bottom:0.6rem; line-height:1.3; }
+  .guide-card p { font-size:0.78rem; color:var(--cobalt); opacity:0.5; line-height:1.6; margin-bottom:1.2rem; }
+  .guide-price { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; color:var(--cobalt); opacity:0.35; }
+  .founder { background:var(--white); padding:5rem 2.5rem; border-top:1px solid rgba(0,85,255,0.08); }
+  .founder-inner { max-width:800px; }
+  .founder-quote { font-size:clamp(1.2rem,2.2vw,1.6rem); color:var(--cobalt); line-height:1.5; font-weight:500; font-style:italic; margin-bottom:2rem; border-left:4px solid var(--cobalt); padding-left:2rem; }
+  .founder-bio { font-size:0.85rem; color:var(--cobalt); opacity:0.55; line-height:1.7; }
+  .founder-bio strong { font-weight:600; opacity:1; }
+  .consultation { display:grid; grid-template-columns:1fr 1fr; background:var(--cobalt); min-height:60vh; }
+  .consultation-left { padding:6rem 2.5rem; display:flex; flex-direction:column; justify-content:center; position:relative; }
+  .consultation-left::after { content:''; position:absolute; right:0; top:0; width:1px; height:100%; background:rgba(255,255,255,0.1); }
+  .consultation-title { font-size:clamp(2.5rem,5vw,4rem); font-weight:800; color:var(--white); line-height:0.95; letter-spacing:-0.03em; margin-bottom:1.5rem; }
+  .consultation-desc { font-size:1rem; line-height:1.7; color:var(--white); opacity:0.65; max-width:420px; margin-bottom:2rem; }
+  .consultation-right { padding:6rem 3rem; display:flex; flex-direction:column; justify-content:center; gap:1.5rem; }
+  .feature { border-top:1px solid rgba(255,255,255,0.12); padding:1.5rem 0 0.5rem; }
+  .feature h4 { font-size:1.1rem; font-weight:500; color:var(--white); margin-bottom:0.5rem; }
+  .feature p { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:0.65rem; color:var(--white); opacity:0.45; line-height:1.7; }
+  .golden { background:var(--cobalt); padding:5rem 2.5rem; text-align:center; }
+  .golden p { font-size:clamp(1.3rem,2.5vw,1.8rem); color:var(--white); line-height:1.5; max-width:700px; margin:0 auto; font-weight:300; }
+  .golden strong { font-weight:600; }
+  .signup-section { background:var(--cream); padding:5rem 2.5rem; border-top:1px solid rgba(0,85,255,0.08); }
+  .signup-inner { max-width:500px; margin:0 auto; text-align:center; }
+  .signup-title { font-size:1.3rem; font-weight:600; color:var(--cobalt); margin-bottom:0.8rem; }
+  .signup-desc { font-size:0.85rem; color:var(--cobalt); opacity:0.5; line-height:1.6; margin-bottom:1.5rem; }
+  .signup-form { display:flex; gap:0.5rem; }
+  .signup-form input { flex:1; padding:0.9rem 1.2rem; border:1px solid rgba(0,85,255,0.15); background:var(--white); font-family:inherit; font-size:0.85rem; color:var(--cobalt); outline:none; }
+  .signup-form input:focus { border-color:var(--cobalt); }
+  .signup-form button { padding:0.9rem 1.8rem; background:var(--cobalt); color:var(--white); border:none; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; font-size:0.7rem; cursor:pointer; }
+  .signup-note { font-size:0.7rem; color:var(--cobalt); opacity:0.35; margin-top:0.8rem; }
+  footer { background:var(--cobalt); padding:5rem 2.5rem 3rem; }
+  .footer-top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3rem; position:relative; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-logo-mark { width:50px; height:50px; border:2px solid var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .footer-col { display:flex; flex-direction:column; gap:0.5rem; }
+  .footer-col h4 { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em; font-size:0.65rem; color:var(--white); opacity:0.4; margin-bottom:0.5rem; }
+  .footer-col a { font-size:0.82rem; color:var(--white); text-decoration:none; opacity:0.6; transition:opacity 0.3s; }
+  .footer-col a:hover { opacity:1; }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:2rem; }
+  .footer-bottom span { font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em; font-size:0.6rem; color:var(--white); opacity:0.3; }
+  .reveal,.reveal-left,.reveal-right { opacity:0; transform:translateY(30px); transition:opacity 0.7s,transform 0.7s; }
+  .reveal-left { transform:translateX(-30px); }
+  .reveal-right { transform:translateX(30px); }
+  .reveal.visible,.reveal-left.visible,.reveal-right.visible { opacity:1; transform:translate(0); }
+  @media(max-width:768px) {
+    .services-grid { grid-template-columns:1fr; }
+    .steps-grid { grid-template-columns:1fr; }
+    .why { grid-template-columns:1fr; }
+    .guides-grid { grid-template-columns:1fr; }
+    .consultation { grid-template-columns:1fr; }
+    .image-band { grid-template-columns:1fr 1fr; height:250px; }
+    .footer-top { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .signup-form { flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-overlay"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><span>bridge.</span></a>
+  <div class="nav-links">
+    <a href="#what">Qué hacemos</a>
+    <a href="#how">Cómo funciona</a>
+    <a href="#guides">Guías</a>
+    <a href="#consultation">Contacto</a>
+    <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="nav-cta">Leer el Starter Guide</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-lines"></div>
+  <div class="hero-subtitle-box">Conectamos tu restaurante con las posibilidades infinitas de la IA.<br>Reduce tu carga de trabajo diaria y aumenta tu rentabilidad.<br>Desde tareas del día a día hasta agentes de IA autónomos.</div>
+  <h1 class="hero-title">bridge<span class="dot">.</span></h1>
+  <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="hero-download">[ Leer el Starter Guide &rarr; ]</a><span class="hero-download-sub">15 min. de lectura &middot; No necesitas conocimientos técnicos</span>
+</section>
+
+<!-- HERO IMAGE -->
+<div class="pixel-img" style="height:450px;"><img src="../en/images/img-1.jpg" alt="Servicio de restaurante"></div>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span>Reseñas de Google</span><span>Ofertas de empleo</span><span>Respuestas a emails</span><span>Cálculo de costes</span><span>Turnos de trabajo</span><span>Nóminas</span><span>Material de formación</span><span>Social Media</span><span>Consultas a proveedores</span><span>Actualización de web</span>
+    <span>Reseñas de Google</span><span>Ofertas de empleo</span><span>Respuestas a emails</span><span>Cálculo de costes</span><span>Turnos de trabajo</span><span>Nóminas</span><span>Material de formación</span><span>Social Media</span><span>Consultas a proveedores</span><span>Actualización de web</span>
+  </div>
+</div>
+
+<!-- QUÉ HACEMOS -->
+<section class="services" id="what">
+  <div class="section-label"><span>Qué hace bridge.</span><span class="code">[BR.1]</span></div>
+  <h2 class="section-title reveal">Te mostramos lo que<br>la IA puede hacer<br>por tu restaurante.</h2>
+  <p class="section-desc reveal">Sin teoría. Sin hype. Tareas reales resueltas en tiempo real. Desde todo lo que te consume el día hasta agentes de IA que trabajan mientras duermes.</p>
+
+  <div class="services-grid">
+    <div class="service-card" data-delay="0"><h3>Tareas diarias &mdash; resueltas al instante</h3><p>Reseñas, emails, posts en redes, ofertas de empleo, descripciones del menú &mdash; lo que antes te llevaba horas, ahora se hace en segundos. Con herramientas que ya tienes.</p></div>
+    <div class="service-card" data-delay="100"><h3>Mejores decisiones</h3><p>Análisis de food cost, ingeniería de menú, estrategia de precios, optimización de turnos &mdash; la IA convierte tus datos en respuestas claras y recomendaciones concretas.</p></div>
+    <div class="service-card" data-delay="200"><h3>Agentes de IA autónomos</h3><p>El siguiente nivel. Agentes de IA que gestionan reservas, responden consultas de clientes, organizan tu bandeja de entrada y actualizan tus sistemas &mdash; 24/7, sin que tengas que hacer nada.</p></div>
+    <div class="service-card" data-delay="0"><h3>Personal y formación</h3><p>Checklists de onboarding, materiales de formación, comunicación multilingüe con el equipo, planificación de turnos &mdash; creados en minutos, adaptados a tu restaurante.</p></div>
+    <div class="service-card" data-delay="100"><h3>Control de costes</h3><p>Comparativas de proveedores, seguimiento de mermas, cálculo de márgenes, análisis de PyG &mdash; todo presentado de forma clara para que sepas a dónde va tu dinero.</p></div>
+    <div class="service-card" data-delay="200"><h3>Marketing y visibilidad</h3><p>Textos para tu web, contenido para Instagram, campañas de email, SEO, fidelización de clientes &mdash; marketing profesional sin necesidad de un equipo de marketing.</p></div>
+  </div>
+</section>
+
+<!-- IMAGE BAND -->
+<div class="image-band">
+  <div class="pixel-img"><img src="../en/images/img-2.jpg" alt="Chef preparando platos en la cocina"></div>
+  <div class="pixel-img"><img src="../en/images/img-3.jpg" alt="Dos cocineros trabajando juntos"></div>
+  <div class="pixel-img"><img src="../en/images/img-4.jpg" alt="Barista preparando un cappuccino"></div>
+  <div class="pixel-img"><img src="../en/images/img-5.jpg" alt="Manager de restaurante hablando con un cliente"></div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section class="steps-section" id="how">
+  <div class="section-label" style="color:var(--white);opacity:0.4;"><span>Cómo funciona</span><span class="code">[BR.2]</span></div>
+  <h2 class="steps-title reveal-left">De agobiado<br>a tranquilo.<br>Tres pasos.</h2>
+  <p class="steps-desc reveal-left">Sin cursos. Sin software. Solo tú, una herramienta de IA gratuita y nuestras guías.</p>
+
+  <div class="steps-grid">
+    <div class="step-card" data-delay="0">
+      <div class="step-num">Paso 01</div>
+      <h4>Lee la guía gratuita</h4>
+      <p>Nuestro Starter Guide te muestra exactamente lo que la IA puede hacer por tu restaurante &mdash; con ejemplos reales, tareas reales, resultados reales. 15 minutos que van a cambiar tu forma de ver tu día a día.</p>
+    </div>
+    <div class="step-card" data-delay="150">
+      <div class="step-num">Paso 02</div>
+      <h4>Empieza hoy mismo</h4>
+      <p>Sigue nuestras instrucciones paso a paso. Abre ChatGPT o Claude, configura tu asistente personal y empieza a delegar tareas inmediatamente. No necesitas conocimientos técnicos.</p>
+    </div>
+    <div class="step-card" data-delay="300">
+      <div class="step-num">Paso 03</div>
+      <h4>¿Listo para más?</h4>
+      <p>Nuestras guías cubren todo &mdash; desde agentes de IA y control de costes hasta automatización de marketing y gestión de personal. Diseñadas específicamente para hostelería.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ IMPORTA -->
+<section class="why" id="why">
+  <div class="why-left">
+    <div class="section-label"><span>Por qué importa</span><span class="code">[BR.3]</span></div>
+    <h2 class="why-title reveal-left">Los restaurantes son a prueba de IA. Nadie te va a reemplazar.</h2>
+    <p class="why-desc reveal-left">La gente siempre va a querer comer fuera. La IA no va a dirigir tu restaurante. Pero quien use IA ahora, trabaja más inteligente, gana más y pasa menos tiempo con las tareas que agotan. Da igual si llevas un restaurante, una cafetería, un bar o el F&amp;B de un hotel &mdash; las oportunidades son las mismas.</p>
+    <a href="#consultation" class="cta-bracket" style="color:var(--cobalt);">[ Hablemos &rarr; ]</a>
+  </div>
+  <div class="why-right">
+    <div class="why-stat reveal-right"><div class="stat-number">15<span style="font-size:1.5rem;opacity:0.5;">min.</span></div><div class="stat-label">Tu pesadilla administrativa diaria &mdash; resuelta por la IA</div></div>
+    <div class="why-stat reveal-right"><div class="stat-number">10</div><div class="stat-label">Tareas reales en el Starter Guide &mdash; con resultados reales</div></div>
+    <div class="why-stat reveal-right"><div class="stat-number">100+</div><div class="stat-label">Restaurantes cuyo día a día ha moldeado estas guías</div></div>
+    <div class="why-stat reveal-right"><div class="stat-number">&infin;</div><div class="stat-label">Posibilidades cuando la IA se encuentra con la hostelería</div></div>
+  </div>
+</section>
+
+<!-- GUÍAS -->
+<section class="guides" id="guides">
+  <h2 class="guides-title">Guías</h2>
+  <p class="guides-sub">Todo lo que necesitas para empezar</p>
+  <div class="guides-grid">
+    <div class="guide-card reveal"><span class="guide-status live">&bull; Disponible &mdash; Gratis</span><h3>El Starter Guide</h3><p>Cómo crear un asistente de IA que se encargue de docenas de tareas diarias por ti. Práctico, directo al grano, 15 minutos de lectura.</p><a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="cta-bracket" style="color:var(--cobalt);">[ Leer el Starter Guide &rarr; ]</a></div>
+    <div class="guide-card reveal"><span class="guide-status live">&bull; Disponible &mdash; 9&thinsp;$</span><h3>Social Media y Marketing</h3><p>Escribe y programa una semana entera de contenido para redes en menos de 30 minutos. Para Instagram, TikTok, Facebook y Google Business. Con prompts listos para usar y un plan de acción de 30 días.</p><a href="https://ai-bridge.kit.com/products/social-media-ai-guide" class="cta-bracket" style="color:var(--cobalt);">[ Conseguir la guía &rarr; ]</a></div>
+    <div class="guide-card reveal"><span class="guide-status">Próximamente</span><h3>Videocursos</h3><p>Tutoriales en vídeo para seguir paso a paso. Mira exactamente cómo configurar y usar herramientas de IA en tu restaurante. Pensado para gente con poco tiempo, no para expertos en tecnología.</p><span class="guide-price">Próximamente</span></div>
+    <div class="guide-card reveal"><span class="guide-status">Próximamente</span><h3>Templates de agentes IA</h3><p>Agentes de IA listos para conectar &mdash; respondedor de reseñas, gestor de reservas, asistente de redes sociales, bot de onboarding. Configura y arranca.</p><span class="guide-price">Próximamente</span></div>
+  </div>
+</section>
+
+<!-- FUNDADOR -->
+<section class="founder">
+  <div class="founder-inner reveal">
+    <p class="founder-quote">Gestioné restaurantes durante 14 años antes de que existiera la IA. Si hubiera tenido estas herramientas entonces, mi vida habría sido infinitamente más fácil. Por eso existe bridge.</p>
+    <p class="founder-bio"><strong>14 años como director de restaurante.</strong> Fundador de <strong>All You Can Reserve</strong> (reservas de mesa) y <strong>Olivia</strong> (sistema de POS y autopedido). Ahora conecto el sector con las herramientas de IA que realmente pueden cambiar el día a día.</p>
+  </div>
+</section>
+
+<!-- CONSULTORÍA -->
+<section class="consultation" id="consultation">
+  <div class="consultation-left">
+    <div class="section-label" style="color:var(--white);opacity:0.4;"><span>Consultoría</span><span class="code">[BR.4]</span></div>
+    <h2 class="consultation-title reveal-left">Consultoría<br>personalizada<br>para<br>hostelería</h2>
+    <p class="consultation-desc reveal-left">Ofrecemos sesiones de consultoría personalizadas para restaurantes, cafeterías, bares y F&amp;B en hoteles. Ya sea que necesites ayuda con una implementación concreta de IA o un análisis operativo completo &mdash; estamos aquí.</p>
+  </div>
+  <div class="consultation-right">
+    <div class="section-label" style="color:var(--white);opacity:0.4;"><span>Solicitar sesión</span></div>
+    <p style="font-size:0.85rem;color:var(--white);opacity:0.6;line-height:1.6;margin-bottom:1.5rem;">Elige un tema y envíanos tu solicitud. Te respondemos en menos de 48 horas.</p>
+    <select style="width:100%;padding:0.9rem 1.2rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.06);font-family:inherit;font-size:0.85rem;color:var(--white);outline:none;appearance:none;cursor:pointer;margin-bottom:1rem;" id="consult-topic">
+      <option value="" style="color:#333;">Elige un tema...</option>
+      <option value="ai-setup" style="color:#333;">Configuración de IA y primeros pasos</option>
+      <option value="social-media" style="color:#333;">Social Media y Marketing</option>
+      <option value="cost-control" style="color:#333;">Control de costes e ingeniería de menú</option>
+      <option value="staff" style="color:#333;">Personal y formación</option>
+      <option value="agents" style="color:#333;">Agentes de IA autónomos</option>
+      <option value="website" style="color:#333;">Web y presencia online</option>
+      <option value="operations" style="color:#333;">Análisis operativo completo</option>
+      <option value="other" style="color:#333;">Otro &mdash; lo explico en mi mensaje</option>
+    </select>
+    <a href="mailto:hello@ai-bridge.restaurant" class="hero-download" style="animation:none;opacity:1;display:block;text-align:center;width:100%;" onclick="var t=document.getElementById('consult-topic');if(t.value){this.href='mailto:hello@ai-bridge.restaurant?subject=Solicitud de consultoría: '+t.options[t.selectedIndex].text;}">[ Solicitar consultoría &rarr; ]</a>
+  </div>
+</section>
+
+<!-- GOLDEN CTA -->
+<section class="golden">
+  <div class="section-label" style="color:var(--white);opacity:0.4;justify-content:center;"><span>¿Listo?</span></div>
+  <p class="reveal"><strong>Nuestro Starter Guide te muestra cómo la IA puede encargarse de docenas de tareas diarias por ti.</strong><br><br>Sin registro. Solo leer.</p>
+  <br>
+  <a href="https://ai-bridge.restaurant/en/guides/starter-guide.pdf" class="hero-download" style="animation:none;opacity:1;">[ Leer el Starter Guide &rarr; ]</a>
+</section>
+
+<!-- EMAIL SIGNUP -->
+<section class="signup-section">
+  <div class="signup-inner reveal">
+    <div class="section-label" style="justify-content:center;"><span>Newsletter</span></div>
+    <h3 class="signup-title">¿No quieres perderte nada?</h3>
+    <p class="signup-desc">Si quieres enterarte cuando publiquemos nuevas guías, déjanos tu email. Solo te escribimos cuando hay algo nuevo. Sin spam, sin vender tus datos.</p>
+    <form action="https://app.kit.com/forms/9250629/subscriptions" method="post" class="signup-form">
+      <input type="email" name="email_address" placeholder="tu@email.com" required>
+      <button type="submit">Suscribirse</button>
+    </form>
+    <p class="signup-note">Totalmente voluntario. Respetamos tu bandeja de entrada.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div></div>
+    <div class="footer-col"><h4>Navegación</h4><a href="#what">Qué hacemos</a><a href="#how">Cómo funciona</a><a href="#guides">Guías</a><a href="#consultation">Contacto</a></div>
+    <div class="footer-col"><h4>Conectar</h4><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="mailto:hello@ai-bridge.restaurant">hello@ai-bridge.restaurant</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 bridge. &mdash; For the people who feed the world.</span>
+    <span><a href="/en/imprint/" style="color:var(--white);opacity:0.8;text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;font-size:0.6rem;margin-right:1.5rem;">Imprint</a><a href="/en/privacy/" style="color:var(--white);opacity:0.8;text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;font-size:0.6rem;">Privacy</a></span>
+  </div>
+</footer>
+
+<script>
+  const staggerObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay) || 0;
+        setTimeout(() => { entry.target.classList.add('visible'); }, delay);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.service-card, .step-card').forEach(el => staggerObs.observe(el));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth' }); });
+  });
+</script>
+</body>
+</html>
